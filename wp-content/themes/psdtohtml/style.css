@@ -1,0 +1,1475 @@
+body {
+    width: 100%;
+    min-width: 320px;
+    margin: 0;
+    color: #505050;
+    font: 16px/20px 'Avenir LT W01 35 Light', Arial, Helvetica, sans-serif;
+    background: #fff;
+    min-width: 1000px;
+    padding-top: 67px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: none;
+    -webkit-font-smoothing: subpixel-antialiased !important;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    display: block;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#header {
+    min-width: 1000px;
+    text-shadow: 0 1px 0 #000;
+    background: #485053;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: linear-gradient(to bottom, #485053 0, #3b4447 100%);
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .3);
+    color: #c8cacb;
+    border-top: 1px solid #2d3235;
+    margin-top: -70px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    position: relative;
+}
+
+header, footer, article, section, hgroup, nav, figure {
+    display: block;
+}
+
+
+.header-holder {
+    width: 981px;
+    margin: 0 auto;
+    min-height: 67px;
+    text-align: center;
+}
+
+.footer-holder:after, #footer .nav:after, .social-network:after, .contact-popup form:after, .jcf-list-holder:after, .row:after, .login-form .area:after,
+.info .items:after, .order .container:after, .add-info:after, .top-choice:after, .pay-tabset:after, .cms-tabs:after, .quote-form .row:after, .details:after,
+#header:after, .inform-list:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.logo a {
+    display: block;
+    height: 100%;
+}
+
+.logo {
+    float: left;
+    margin: 23px 37px 0 0;
+    background: url(../bundles/intdevp2h/images/img-retina/main@2x.png?2) no-repeat;
+    background-size: 152px 84px;
+    width: 125px;
+    height: 18px;
+    text-indent: -999em;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    transition: color .2s ease, background .2s ease, opacity .2s ease, border-color .2s ease;
+    color: #0086da;
+}
+
+address {
+    display: block;
+}
+
+.contacts {
+    margin: 25px 0 0;
+    float: left;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+
+.contacts a:not(.tel-link) {
+    margin: 0 10px 0 0;
+    float: left;
+    text-indent: -999em;
+    outline: 0;
+    position: relative;
+    width: 11px;
+    height: 14px;
+}
+
+.contacts a {
+    color: #c8cacb;
+}
+
+.contacts .contact::before {
+    content: "✉";
+    font-family: SSStandard;
+    padding-top: 2px;
+}
+
+.contacts span::before, .contacts .tel-link::before, .contacts a::before {
+    content: "📞";
+    z-index: -1;
+    display: inline-block;
+    vertical-align: top;
+    font: 12px/18px SSPika;
+    padding: 1px 5px 0px 0px;
+}
+
+.contacts a:before {
+    text-indent: 0;
+    float: left;
+}
+
+#header .chat.chat-online {
+    color: greenyellow;
+}
+
+
+.contacts span, .contacts .tel-link {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+
+
+
+/* Start navigation menu */
+
+.menu-top-menu-container {
+    margin: 0 0 0 -50px;
+    border-right: 1px solid rgba(255, 255, 255, .1);
+    letter-spacing: 1px;
+    font: 13px/67px 'Avenir LT W01 55 Roman', Arial, Helvetica, sans-serif;
+}
+
+.menu-top-menu-container ul{
+    box-sizing: content-box;
+    border-right: 1px solid #35393b;
+    margin: 0 0 0 -1px;
+    padding: 0;
+    /*list-style: none;*/
+    display: inline-block;
+
+}
+
+.menu-top-menu-container ul li {
+    display: inline-block;
+    /*margin: 0 0 0 10px;*/
+}
+
+/*.top-menu li{*/
+/*    margin: 0 0 0 10px;*/
+/*}*/
+
+.menu-top-menu-container ul li ul {
+    position: absolute;
+    display: none;
+}
+
+.menu-top-menu-container ul li ul li {
+    display: block;
+    background: linear-gradient(to bottom, #485053 0, #3b4447 100%);
+}
+
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.sub-menu a {
+    color: #fff;
+    cursor: default;
+    opacity: .9999;
+    transition: all .4s ease;
+    display:inline-block;
+}
+
+.sub-menu li:after {
+    position: absolute;
+    right: 550px;
+    top: 29px;
+    content: '';
+    font: 8px/12px 'SSStandard';
+}
+
+.top-menu li:hover .sub-menu {
+    display: block;
+}
+
+.menu-top-menu-container ul :hover {
+    background: #343b3e;
+}
+
+/*Order Now item*/
+#menu-item-40 {
+    display: inline-block;
+    background: linear-gradient(135deg, #349ee0 0, #0086da 40%, #0086da 100%);
+}
+
+#menu-item-40 a {
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .3);
+    font-family: 'Avenir LT W01 95 Black', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+/* end navigation menu */
+
+input[type='text'], input[type='password'], input[type='email'], input[type='tel'], input[type='number'], .jcf-select-area {
+    box-shadow: 0 1px 0 0 #b1b1b0;
+    border-radius: 2px;
+    border: 1px solid #e5e7e7;
+    padding: 9px 12px;
+    background: #fff;
+    vertical-align: middle;
+    font: 16px 'Avenir LT W01 35 Light', Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin: 0 0 22px;
+    display: block;
+    outline: 0;
+    cursor: text;
+    -webkit-appearance: none;
+}
+
+input, textarea, select, button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+}
+
+input, textarea, select {
+    color: #505050;
+}
+
+#footer {
+    position: relative;
+    z-index: 11;
+    padding: 0 0 11px;
+    width: 100%;
+    height: 30px;
+}
+
+.footer-holder {
+    width: 980px;
+    margin: 0 auto;
+    padding: 30px 0 36px;
+    /*text-align: center;*/
+
+}
+
+#footer .nav {
+    font: 11px/14px 'Avenir LT W01 95 Black', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    float: left;
+    width: 293px;
+    margin: -3px 47px 0 20%;
+}
+
+#footer .news {
+    font-size: 13px;
+    line-height: 17px;
+    float: left;
+    width: 388px;
+    position: relative;
+}
+
+#footer .section {
+    float: right;
+    width: 206px;
+    margin: -1px 0 -3px;
+}
+
+.add {
+    width: 980px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.add .copyright {
+    text-align: center;
+    font-size: 11px;
+    padding: 1px 0 0;
+    margin-left: 43%;
+}
+
+.add .copyright a {
+    color: #8a9295;
+}
+
+.add:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.news .area {
+    background: #fff;
+    position: relative;
+    border-radius: 2px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .3);
+    padding: 0 12px 0 0;
+    margin: 0 0 12px;
+    overflow: hidden;
+    height: 113px;
+}
+
+
+.news figure {
+    float: left;
+    margin: 0 20px 0 0;
+    position: relative;
+    z-index: 3;
+}
+
+.subscribe-form {
+    position: relative;
+}
+
+.nav ul:first-child {
+    float: left;
+}
+
+.nav ul {
+    float: right;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.nav a {
+    color: #505050;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.nav a, .nav a:active {
+    position: relative;
+    transition: none;
+}
+
+#footer .nav li {
+    padding: 18px 0 0;
+}
+
+.news .txt {
+    overflow: hidden;
+    padding: 7px 0 0;
+}
+
+.news p {
+    margin: 0;
+}
+
+.subscribe-form {
+    position: relative;
+}
+
+
+.subscribe-form .btn {
+    float: right;
+    width: 116px;
+    font-size: 13px;
+}
+
+.subscribe-form .btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 116px;
+    font-size: 13px;
+}
+
+
+.login-form input[type="submit"], .dev-info .all span,
+.btn, .paging .prev, .paging .next, .btn2, .btn-extend, .btn-calculate, .order .navbar .back {
+    height: 32px;
+    font: 11px/33px 'Avenir LT W01 95 Black', Arial, Helvetica, sans-serif;
+    background: #0094e0;
+    background: linear-gradient(to bottom, #0094e0 1%, #0085da 99%);
+    text-align: center;
+    border-radius: 2px;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, .69);
+    text-transform: uppercase;
+    position: relative;
+    padding: 0 20px;
+    display: inline-block;
+    vertical-align: top;
+    color: #fff;
+}
+
+
+#footer .subscribe-form input[type='text'], #footer .subscribe-form input[type='email'] {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.subscribe-form .answer-success, .subscribe-form .answer-error {
+    visibility: hidden;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: -1px;
+    bottom: -1px;
+    background: #fff;
+    color: #828282;
+    font-size: 13px;
+    line-height: 16px;
+    padding: 8px 0;
+}
+
+.subscribe-form:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+#footer .subscribe-form input[type='text'], #footer .subscribe-form input[type='email'] {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.subscribe-box input[type='text'], .subscribe-box input[type='email'], .subscribe-form input[type='text'], .subscribe-form input[type='email'] {
+    font-size: 13px;
+    line-height: 18px;
+    padding: 6px 12px;
+    height: 32px;
+}
+
+
+.subscribe-form input[type='text'], .subscribe-form input[type='email'] {
+    float: left;
+    margin: 0;
+    width: 263px;
+    border-radius: 3px;
+    padding: 5px 12px 6px;
+}
+
+.social-network ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.social-network li {
+    float: left;
+    margin: 0 7px 0 0;
+}
+
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+}
+
+.social-network a {
+    float: left;
+    color: #828282;
+    text-indent: -999em;
+    position: relative;
+    text-align: center;
+    width: 25px;
+    height: 26px;
+    outline: 0;
+}
+
+.tweet {
+    line-height: 21px;
+    font-size: 13px;
+    float: right;
+    width: 206px;
+    margin: -9px 0 0;
+}
+
+
+/*#footer:after {*/
+/*position: absolute;*/
+/*bottom: 56px;*/
+/*left: 0;*/
+/*width: 100%;*/
+/*height: 1px;*/
+/*background: #dee0e1;*/
+/*content: '';*/
+/*}*/
+
+
+/** Contact us page*/
+
+
+h2.main-title {
+    font: 24px/36px 'Avenir LT W01 95 Black', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    margin: 38px auto 20px;
+    color: #000;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+#main {
+    overflow: hidden;
+    background: #ededeb;
+    border-top: 1px dotted #b3b4b4;
+    position: relative;
+}
+
+.contact-us {
+    overflow: hidden;
+    width: 694px;
+    margin: 30px auto 47px;
+    background: #fff;
+    padding: 0 30px 30px;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+.order .add-box:after, .custom-tab .add-box:before, .client-box:before, .blog:after, #main:after, .examples:after, .process:after, .team-head:after, .visual-intro:before, .team:after, .info-case:after, .info-case:before, .client-box .details:before, .b2b-intro:before, .visual-intro.alt:after, .testimonials:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 0, rgba(0, 0, 0, 0) 100%);
+    z-index: 10;
+}
+
+
+.contact-us fieldset {
+    float: left;
+    width: 100%;
+}
+
+form, fieldset {
+    margin: 0;
+    padding: 0;
+    border-style: none;
+}
+
+fieldset {
+    display: block;
+    /*margin-inline-start: 2px;*/
+    /*margin-inline-end: 2px;*/
+    /*padding-block-start: 0.35em;*/
+    /*padding-inline-start: 0.75em;*/
+    /*padding-inline-end: 0.75em;*/
+    /*padding-block-end: 0.625em;*/
+    /*min-inline-size: min-content;*/
+    /*border-width: 2px;*/
+    /*border-style: groove;*/
+    /*border-color: threedface;*/
+    /*border-image: initial;*/
+    /*margin-bottom: 20px;*/
+}
+
+.contact-us .details {
+    box-shadow: none;
+    margin: 0 -30px 30px;
+    padding: 27px 30px 30px;
+    border-radius: 5px 5px 0 0;
+}
+
+.details {
+    position: relative;
+    background: #f5f5f5;
+    padding: 27px 30px 30px;
+}
+
+.cell2 {
+    float: left;
+    width: 50%;
+    padding: 0 15px 22px 0;
+}
+
+.required label, .details .row + label {
+    font-family: 'Avenir LT W01 95 Black', Arial, Helvetica, sans-serif;
+}
+
+.details label {
+    margin: 0 0 13px;
+}
+
+label {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cell2 + .cell2 {
+    padding: 0 0 22px 15px;
+}
+
+.required, .client-box .password {
+    position: relative;
+    padding: 0 0 22px;
+}
+
+label.required {
+    padding: 0;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+
+.contact-us .section {
+    margin: 0;
+}
+
+.details .section, .a-phone .section {
+    background: #ededeb;
+    border-radius: 2px;
+    border: 1px solid #dedfdf;
+    box-shadow: 0 1px 0 0 #b1b1b1;
+    margin: 0 30px 0 0;
+}
+
+.textarea-box {
+    position: relative;
+    background: #fff;
+    padding: 0 0 12px !important;
+    border-radius: 0;
+}
+
+#contact_message {
+    height: 165px;
+    min-height: 165px;
+}
+
+.textarea-box textarea {
+    padding: 9px 12px;
+    height: 297px;
+    min-height: 297px;
+    box-shadow: none !important;
+    border: 0;
+    border-radius: 2px 2px 0 0;
+    font: 16px/22px 'Avenir LT W01 55 Roman', Arial, Helvetica, sans-serif;
+    margin: 0;
+    resize: none;
+}
+
+textarea {
+    overflow: auto;
+    min-width: 100%;
+    max-width: 100%;
+    box-shadow: 0 1px 0 0 #b1b1b0;
+    border-radius: 2px;
+    border: 1px solid #e5e7e7;
+    padding: 9px 12px;
+    background: #fff;
+    vertical-align: middle;
+    font: 16px 'Avenir LT W01 35 Light', Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin: 0 0 26px;
+    display: block;
+    outline: 0;
+    -webkit-appearance: none;
+}
+
+textarea {
+    -webkit-appearance: textarea;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    flex-direction: column;
+    resize: auto;
+    cursor: text;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+    padding: 2px;
+}
+
+.textarea-box .resize {
+    background: url(../bundles/intdevp2h/images/bg-textarea-box.gif?2) no-repeat;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-indent: -999em;
+    overflow: hidden;
+    cursor: nw-resize;
+}
+
+.attach-list {
+    margin: 0;
+    padding: 0 0 0 12px;
+    list-style: none;
+    line-height: 36px;
+    font-size: 13px;
+    position: relative;
+    z-index: 2;
+    color: #828282;
+    overflow: hidden;
+}
+
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.link-box {
+    z-index: 3;
+    background: #fff;
+    padding: 2px 12px;
+    position: absolute;
+    left: 0;
+    bottom: 12px;
+    width: 100%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.link-box .txt-holder {
+    padding: 0 77px 0 0;
+    float: left;
+    width: 100%;
+}
+
+.link-box .txt-holder input[type='text'] {
+    margin: 0;
+    padding: 5px 12px 6px;
+    box-shadow: 0 1px 0 0 #b1b1b0;
+    border-radius: 2px;
+    border: 1px solid #e5e7e7;
+}
+
+input {
+    -webkit-appearance: textfield;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    padding: 1px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
+
+.link-box .btn {
+    float: right;
+    margin: 0 0 0 -70px;
+}
+
+.file {
+    color: #505050;
+    position: relative;
+    padding: 12px;
+    min-height: 31px;
+}
+
+.file .file-btn {
+    float: left;
+    width: 8px;
+    height: 16px;
+    background: url(../bundles/intdevp2h/images/main.png?2) -144px 0 no-repeat;
+    margin: 7px 8px 0 0;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.file {
+    color: #505050;
+    position: relative;
+    padding: 12px;
+    min-height: 31px;
+}
+
+.file ul {
+    padding: 5px 2px;
+    text-transform: uppercase;
+    font: 9px/21px 'Avenir LT W01 85 Heavy', Arial, Helvetica, sans-serif;
+    margin: 0;
+    list-style: none;
+    border-radius: 2px;
+    background: #fff;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+
+.file-bar:after {
+    right: 100%;
+    border: solid transparent;
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: #fff;
+    border-width: 4px;
+    top: 50%;
+    margin-top: -4px;
+}
+
+.file li {
+    position: relative;
+    float: left;
+    margin: 0 -1px 0 0;
+    padding: 0 9px 0 10px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.file ul {
+    padding: 5px 2px;
+    text-transform: uppercase;
+    font: 9px/21px 'Avenir LT W01 85 Heavy', Arial, Helvetica, sans-serif;
+    margin: 0;
+    list-style: none;
+    border-radius: 2px;
+    background: #fff;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+element.style {
+    position: relative;
+    display: inline-block;
+}
+
+.file a {
+    color: #505050;
+}
+
+
+element.style {
+    visibility: hidden;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 40px;
+    height: 10px;
+    border: 0px;
+    cursor: pointer;
+    opacity: 0.0001;
+}
+
+
+input[type="file" i] {
+    align-items: baseline;
+    color: inherit;
+    text-align: start !important;
+}
+
+
+/*a:-webkit-any-link {*/
+/*    color: -webkit-link;*/
+/*    cursor: pointer;*/
+/*    text-decoration: underline;*/
+/*}*/
+
+.file-bar .drag-drop {
+    font: 9px/19px 'Avenir LT W01 85 Heavy', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    border: 1px dashed #b1b1b1;
+    padding: 0 9px;
+    height: 21px;
+    width: 102px;
+    box-shadow: none;
+    float: left;
+    cursor: default;
+    background: #f5f5f5;
+    white-space: nowrap;
+}
+
+.header-holder:after, .details .file:after, .payment-box .area:after, .services .container:after, .count-box .messages:after, .slider:after, .faq:after, .main-title:after, .blog-comment .area:after, .process-holder:after, .client-box .container:after, .paging:after, .post .btn-holder:after, .post-info:after, .edit-box:after, .bill-order dl:after, .footer-holder:after, #footer .nav:after, .social-network:after, .contact-popup form:after, .jcf-list-holder:after, .row:after, .login-form .area:after, .info .items:after, .order .container:after, .add-info:after, .top-choice:after, .pay-tabset:after, .cms-tabs:after, .quote-form .row:after, .details:after, #header:after, .inform-list:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.check-area {
+    padding: 0 0 10px;
+    position: relative;
+    text-align: left;
+    clear: both;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+}
+
+.check-area [type="checkbox"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+input[type="checkbox"] {
+    width: 16px;
+    height: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+input[type="checkbox" i] {
+    -webkit-appearance: checkbox;
+    box-sizing: border-box;
+}
+
+input[type="radio" i], input[type="checkbox" i] {
+    background-color: initial;
+    cursor: default;
+    margin: 3px 0.5ex;
+    padding: initial;
+    border: initial;
+}
+
+.check-area .nice-chk {
+    float: left;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #b6c3ca;
+    border-radius: 2px;
+    margin: 0 !important;
+    background: #fff;
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0, rgba(248, 248, 248, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0, rgba(248, 248, 248, 1) 100%);
+    box-sizing: border-box;
+}
+
+.details label {
+    margin: 0 0 13px;
+}
+
+.check-area .nice-chk:after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 4px;
+    border-bottom: 3px solid transparent;
+    border-left: 3px solid transparent;
+    -webkit-transform: rotate(16deg);
+    -ms-transform: rotate(16deg);
+    transform: rotate(-45deg);
+}
+
+.check-area .txt {
+    display: block;
+    padding: 0 0 0 30px;
+}
+
+.contact-us .contacts {
+    margin: -2px 92px 0 0;
+}
+
+address {
+    display: block;
+}
+
+.contact-us .contacts .title {
+    margin: 0 0 3px;
+}
+
+.contact-us .contacts a {
+    color: #0086da;
+    margin: 0 7px 0 0;
+}
+
+.contacts .chat::before {
+    content: "💬";
+    font-family: SSStandard;
+}
+
+.offer a:after, .product h3 span:before, .contacts span:before, .contacts a:before, #nav .drop-parent:after, .intro .prev:after, .intro .next:after,
+.calendar-caption .prev:after, .calendar-caption .next:after, .quote-box .prev:after, .quote-box .next:after, .offer h3 span:after, .dev-info a:after,
+.dev-info a:before, .dev-info .psd2html h2:after, .dev-info .psd2html h2:before, .dev-info .more:after, .info .note a:after, .contacts .email:before,
+.contacts .chat:before, .social-network a:after, .layout-switcher li a:before, .info-btn:after, .add-info .note-btn:before, .navbar a:before, .navbar a:after,
+.item-selected .price:after, .order-sum .price:after, .attach-list .remove:after, .paging .prev:after, .paging .next:after, .offer-list a:before, .services .columns h3:before,
+.post-info:before, .info-post a:before, .post-blog figure:before, .prev-page:after, .next-page:after, .order-sum .notes tbody b:before, .nav .all:after,
+.code-title .drop:before, .btn-calculate:before, .cms-scope .sub-title:before, .popup .close:after, .chat-box .close:after, .chat-form .submit:after,
+.chat-orders a:before, .css-popup table span:after, .css-popup .notes:before, .checkout-box .price:after, .intro .learn-more:before, .order-info .close:after,
+.order-info:before {
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-feature-settings: "liga";
+    -moz-font-feature-settings: "liga=1";
+    -moz-font-feature-settings: "liga";
+    -ms-font-feature-settings: "liga" 1;
+    -o-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+}
+
+.contacts span::before, .contacts .tel-link::before, .contacts a::before {
+    content: "📞";
+    z-index: -1;
+    display: inline-block;
+    vertical-align: top;
+    font: 12px/18px SSPika;
+    padding: 1px 5px 0px 0px;
+}
+
+.contacts a:before {
+    text-indent: 0;
+    float: left;
+}
+
+.contact-us .contacts span {
+    margin: 0 3px 0 0;
+}
+
+i, cite, em, var, address, dfn {
+    font-style: italic;
+}
+
+.contact-us .contacts span:before {
+    color: #0086da;
+}
+
+.contact-us input.btn {
+    float: right;
+    width: 80px;
+    padding: 0;
+    margin: 0 0 0 -80px;
+}
+
+input[type='submit'] {
+    -webkit-appearance: none;
+}
+
+input.btn {
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+#main:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 0, rgba(0, 0, 0, 0) 100%);
+    z-index: 10;
+}
+
+/** end Contact us page*/
+
+input[type="hidden" i], input[type="image" i], input[type="file" i] {
+    -webkit-appearance: initial;
+    background-color: initial;
+    cursor: default;
+    padding: initial;
+    border: initial;
+}
+
+input[type="hidden" i] {
+    display: none;
+}
+
+
+input, textarea, select, button, meter, progress {
+    -webkit-writing-mode: horizontal-tb !important;
+}
+
+
+/** Examples page
+
+http://wp.magento1.local/?page_id=247
+*/
+
+.examples {
+    background: #ededeb;
+    border-top: 1px dotted #b3b4b4;
+    position: relative;
+    padding: 30px 0;
+    font-size: 12px;
+    line-height: 18px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.examples:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 0, rgba(0, 0, 0, 0) 100%);
+    z-index: 10;
+}
+
+.filter-section {
+    max-width: 980px;
+    margin: 5px auto 33px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.filter-section .choose-filter {
+    display: none;
+    color: #0086da;
+    cursor: pointer;
+    position: relative;
+    padding-right: 20px;
+    font: 14px/20px "Avenir LT W01 95 Black", Arial, Helvetica, sans-serif;
+}
+
+.filter-section > .holder {
+    text-align: center;
+}
+
+.filter-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.filter-list li {
+    margin: 0 3px 7px 0;
+    background: #fff;
+    width: 120px;
+    height: 37px;
+    border-radius: 2px;
+    box-shadow: 0 1px 0 rgba(205, 209, 210, 0.004);
+    line-height: 37px;
+    cursor: pointer;
+    position: relative;
+}
+
+.filter-list li, .filter-section .check-box {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 11px 0 0;
+}
+
+
+.filter-section input[type='checkbox'] {
+    left: -999px;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+input[type="checkbox"] {
+    width: 16px;
+    height: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+input, textarea, select {
+    color: #505050;
+}
+
+input[type="checkbox" i] {
+    -webkit-appearance: checkbox;
+    box-sizing: border-box;
+}
+
+input[type="checkbox" i] {
+    background-color: initial;
+    cursor: default;
+    margin: 3px 0.5ex;
+    padding: initial;
+    border: initial;
+}
+
+input {
+    -webkit-appearance: textfield;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    padding: 1px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+
+    -webkit-writing-mode: horizontal-tb !important;
+}
+
+.filter-list label {
+    vertical-align: top;
+    display: block;
+}
+
+label {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.filter-list li {
+    margin: 0 3px 7px 0;
+    background: #fff;
+    width: 120px;
+    height: 37px;
+    border-radius: 2px;
+    box-shadow: 0 1px 0 rgba(205, 209, 210, 0.004);
+    line-height: 37px;
+    cursor: pointer;
+    position: relative;
+}
+
+.filter-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+.filter-list .active, .filter-list .reset, .filter-list .active .custom-select:after {
+    background: #349ee0;
+    color: #fff;
+}
+
+.filter-section .row {
+    margin: 0 0 20px;
+}
+
+.filter-section .title {
+    margin: 0 10px 0 0;
+    font-weight: bold;
+}
+
+.filter-section .row * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.filter-section > .holder {
+    text-align: center;
+}
+
+.filter-list li, .filter-section .check-box {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 11px 0 0;
+}
+
+.radio-btn {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #b6c3ca;
+    background: #fff;
+    margin: 0 5px 0 0;
+}
+
+.radio-btn:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+    content: '';
+    border-radius: 50%;
+}
+
+
+input[type="radio"]:checked + .radio-btn:after {
+    background: #0085da;
+}
+
+
+/*
+Category page
+ */
+
+ .product_title {
+margin: 5px;
+    width: auto;
+    height: 50px;
+    padding-left: 8%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+}
+ .product_description {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 100px;
+    padding: 15px;
+    border: 1px solid black;
+}
+
+.default_product_image {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.small-12 {
+    float: left;
+    padding: 35px;
+    text-align: center;
+}
+
+ .product_block {
+    padding: 35px;
+    border: 1px solid grey;
+    width: 450px;
+    background: #ededeb;
+    display: block;
+
+}
+
+#ajax-posts {
+    margin: 0 10% 0 18%;
+}
+
+.bottom-navigation {
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.bottom-navigation-button {
+    margin: 10px;
+    width: 130px;
+    height: 35px;
+    font: 16px/20px 'Avenir LT W01 35 Light', Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+
+/**
+    Footer social icons
+ */
+
+.social-icons {
+    padding-top: 4%;
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.social-icons {
+
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.main-heading {
+    text-align: center;
+}
