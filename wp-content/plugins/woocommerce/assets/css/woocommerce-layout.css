@@ -38,6 +38,7 @@
 .flex-viewport {
     width: 80%;
     height: 80%;
+    margin-left: 10%;
 }
 
 .woocommerce #content div.product div.thumbnails::after, .woocommerce #content div.product div.thumbnails::before, .woocommerce div.product div.thumbnails::after, .woocommerce div.product div.thumbnails::before, .woocommerce-page #content div.product div.thumbnails::after, .woocommerce-page #content div.product div.thumbnails::before, .woocommerce-page div.product div.thumbnails::after, .woocommerce-page div.product div.thumbnails::before {

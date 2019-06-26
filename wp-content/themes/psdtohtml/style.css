@@ -540,6 +540,8 @@ h2.main-title {
     background: #ededeb;
     border-top: 1px dotted #b3b4b4;
     position: relative;
+    min-height: calc(80vh - 80px);
+    /*min-height: 100%;*/
 }
 
 .contact-us {
