@@ -359,21 +359,17 @@
 
 .woocommerce div.product .woocommerce-tabs ul.tabs {
     list-style: none;
-    padding: 0 0 0 1em;
-    margin: 0 0 1.618em;
+    margin: 0 0 1.618em -38px;
     overflow: hidden;
-    position: relative
+    position: relative;
+    text-align: center;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li {
     border: 1px solid #d3ced2;
     background-color: #ebe9eb;
-    display: inline-block;
-    text-align: center;
-    position: relative;
     z-index: 0;
     border-radius: 4px 4px 0 0;
-    margin: 0 auto 0 47.25%;
     padding: 0 1em
 }
 
