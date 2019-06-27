@@ -8,7 +8,7 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<header id="header" role="banner">
+<header id="header" role="banner" class="fixed-position">
     <div class="header-holder">
         <h1 class="logo" id="logo" title="PSD to HTML"><a href="/" accesskey="1">PSD2HTML&reg;</a></h1>
         <div class="panel">
@@ -24,7 +24,24 @@
                     'menu_class' => 'top-menu')); ?>
             </nav>
         </div>
+        <a href="#" class="menu"><span>menu</span></a>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        var clicks = 0;
+        $(".menu").on("click", function () {
+            console.log('if' + clicks);
+            if ((clicks % 2) === 0){
+                $("#header").addClass('active-panel');
+            } else{
+                $("#header").removeClass('active-panel');
+            }
+            ++clicks;
+        });
+        console.log(clicks);
+        clicks = 0;
+    </script>
 </header>
 
 

@@ -75,7 +75,7 @@ h1 {
 .logo {
     float: left;
     margin: 23px 37px 0 0;
-    background: url(../bundles/intdevp2h/images/img-retina/main@2x.png?2) no-repeat;
+    background: url(http://wp.magento1.local/wp-content/themes/psdtohtml/images/logo.png) no-repeat;
     background-size: 152px 84px;
     width: 125px;
     height: 18px;
@@ -153,7 +153,7 @@ address {
 
 .menu-top-menu-container {
     margin: 0 0 0 -50px;
-    border-right: 1px solid rgba(255, 255, 255, .1);
+    /*border-right: 1px solid rgba(255, 255, 255, .1);*/
     letter-spacing: 1px;
     font: 13px/67px 'Avenir LT W01 55 Roman', Arial, Helvetica, sans-serif;
 }
@@ -1471,7 +1471,143 @@ margin: 5px;
     text-align: center;
 }
 
-@media only screen and (max-width: 1100px) {
+.menu {
+    display: none;
+}
+
+.menu:active, .menu {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 31px;
+    height: 31px;
+    background: rgba(0,0,0,.5);
+    border-radius: 3px;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.menu:before, .menu:after {
+    content: '';
+    top: 10px;
+}
+
+.menu:before, .menu:after, .menu span {
+    background: #fff;
+    border-radius: 4px;
+    position: absolute;
+    top: 16px;
+    left: 25%;
+    right: 25%;
+    height: 3px;
+    margin-top: -2px;
+    transition: all .2s linear;
+}
+
+.menu:before, .menu:after, .menu span {
+    background: #fff;
+    border-radius: 4px;
+    position: absolute;
+    top: 16px;
+    left: 25%;
+    right: 25%;
+    height: 3px;
+    margin-top: -2px;
+    transition: all .2s linear;
+}
+
+.menu:before, .menu:after, .menu span {
+    background: #fff;
+    border-radius: 4px;
+    position: absolute;
+    top: 16px;
+    left: 25%;
+    right: 25%;
+    height: 3px;
+    margin-top: -2px;
+    transition: all .2s linear;
+}
+
+.menu:before, .menu:after {
+    content: '';
+    top: 10px;
+}
+
+.menu:after {
+    top: 22px;
+}
+
+.active-panel .menu:after, .active-panel .menu:before {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 16px;
+    left: 15%;
+    right: 15%;
+}
+
+.active-panel .menu span {
+    opacity: 0;
+}
+
+.close-btn:after, .active-panel .menu:after {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/*@media only screen and (max-width: 1100px) {*/
+/*  */
+/*}*/
+
+@media only screen and (max-width: 1565px) {
+    #ajax-posts {
+        max-width: 1040px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 1040px) {
+
+    .logo {
+        float: none;
+        display: block;
+        margin: 23px auto 0;
+        position: relative;
+        left: 5px;
+    }
+    .menu {
+        display: block;
+    }
+    .header-holder {
+        padding: 0;
+        float: left;
+        width: 100%;
+    }
+
+    #header .contacts {
+        position: absolute;
+        top: 0;
+        left: 18px;
+    }
+
+    .active-panel #menu-top-menu {
+        display: block;
+    }
+
+    #menu-top-menu {
+        float: none;
+        border: 0;
+        border-top: 1px solid rgba(255, 255, 255, .1);
+        box-shadow: inset 0 1px 0 0 #35393b;
+        margin: 23px 0 0;
+        display: none;
+    }
+
+    #ajax-posts {
+        max-width: 500px;
+        margin: 0 auto;
+    }
     #main {
         overflow: hidden;
         background: #ededeb;
@@ -1483,14 +1619,12 @@ margin: 5px;
         width: 980px;
         margin: 0 auto;
         padding: 30px 0 36px;
-        display: flex;
-        flex-flow: column;
     }
     #footer .nav {
         font: 14px/14px 'Avenir LT W01 95 Black', Arial, Helvetica, sans-serif;
         text-transform: uppercase;
         letter-spacing: 2px;
-        order: 2;
+
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1504,9 +1638,8 @@ margin: 5px;
         margin: 0 5% 0 0;
     }
     .social-icons {
-        margin: -25px 0 20px 0;
+        margin: 1em 0 0 0;
         padding-top: 4%;
-        order: 1;
         text-align: center;
     }
     .fa {
@@ -1522,15 +1655,15 @@ margin: 5px;
 
     .woocommerce div.product div.images.woocommerce-product-gallery {
         position: relative;
-         margin: 0;
+        margin: 0;
     }
 
     .woocommerce div.product div.images {
-         margin-bottom: 0;
+        margin-bottom: 0;
     }
     .woocommerce-product-gallery {
-         width: auto;
-         height: auto;
+        width: auto;
+        height: auto;
     }
 
     .woocommerce div.product div.images .flex-control-thumbs {
@@ -1541,16 +1674,18 @@ margin: 5px;
     }
 }
 
-@media only screen and (max-width: 1565px) {
-    #ajax-posts {
-        max-width: 1100px;
-        margin: 0 auto;
-    }
+@media only screen and (max-width: 1016px) {
+
 }
 
-@media only screen and (max-width: 1040px) {
-    #ajax-posts {
-        max-width: 500px;
-        margin: 0 auto;
-    }
+/*@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){*/
+/*    .logo {*/
+/*        background: url(../bundles/intdevp2h/images/img-retina/main@2x.png?2) no-repeat;*/
+/*        background-size: 152px 84px;*/
+/*    }*/
+/*}*/
+
+@media only screen and (max-width: 1016px) {
+
 }
+
