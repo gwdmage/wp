@@ -624,7 +624,7 @@ label.required {
     border-radius: 2px;
     border: 1px solid #dedfdf;
     box-shadow: 0 1px 0 0 #b1b1b1;
-    margin: 0 30px 0 0;
+    margin: 0 0px 0 0;
 }
 
 .textarea-box {
@@ -1351,9 +1351,9 @@ margin: 5px;
         max-width: 1040px;
         margin: 0 auto;
     }
-    body {
-        min-width: 1040px;
-    }
+    /*body {*/
+    /*    min-width: 1040px;*/
+    /*}*/
 }
 
 @media only screen and (max-width: 1040px) {
@@ -1409,14 +1409,14 @@ margin: 5px;
         width: auto;
     }
     #footer .nav {
-        font: 14px/14px 'Avenir LT W01 95 Black', Arial, Helvetica, sans-serif;
+        font: 12px/12px 'Avenir LT W01 95 Black', Arial, Helvetica, sans-serif;
         text-transform: uppercase;
         letter-spacing: 2px;
 
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 0 0 3%;
+        margin: 0 0 0 7%;
         float: none;
         width: auto;
     }
@@ -1432,7 +1432,7 @@ margin: 5px;
     }
     .fa {
         padding: 20px;
-        font-size: 50px;
+        font-size: 30px;
         text-align: center;
         text-decoration: none;
         margin: 5px 2px;
@@ -1473,5 +1473,33 @@ margin: 5px;
         max-width: 520px;
         margin: 0 auto;
         padding: 5px;
+    }
+
+    .cell2 {
+        float: none;
+        width: auto;
+        padding: 0 !important;
+    }
+
+    .contact-us {
+        width: auto;
+    }
+
+    input.btn {
+        width: 95% !important;
+        height: 60% !important;
+        margin-top: 3% !important;
+        margin-left: 2% !important;
+        float: none !important;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 750px) {
+    .contact-us {
+        width: auto;
+        margin: 30px;
     }
 }
