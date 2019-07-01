@@ -5,7 +5,7 @@ body {
     color: #505050;
     font: 16px/20px 'Avenir LT W01 35 Light', Arial, Helvetica, sans-serif;
     background: #fff;
-    min-width: 1000px;
+    /*min-width: 1000px;*/
     padding-top: 67px;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: none;
@@ -21,7 +21,7 @@ body {
 }
 
 #header {
-    min-width: 1000px;
+    /*min-width: 1000px;*/
     text-shadow: 0 1px 0 #000;
     background: #485053;
     background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -275,7 +275,6 @@ input, textarea, select {
 }
 
 .footer-holder {
-    width: 980px;
     margin: 0 auto;
     padding: 30px 0 36px;
 }
@@ -504,18 +503,6 @@ ul, menu, dir {
     margin: -9px 0 0;
 }
 
-
-/*#footer:after {*/
-/*position: absolute;*/
-/*bottom: 56px;*/
-/*left: 0;*/
-/*width: 100%;*/
-/*height: 1px;*/
-/*background: #dee0e1;*/
-/*content: '';*/
-/*}*/
-
-
 /** Contact us page*/
 
 
@@ -576,18 +563,6 @@ form, fieldset {
 
 fieldset {
     display: block;
-    /*margin-inline-start: 2px;*/
-    /*margin-inline-end: 2px;*/
-    /*padding-block-start: 0.35em;*/
-    /*padding-inline-start: 0.75em;*/
-    /*padding-inline-end: 0.75em;*/
-    /*padding-block-end: 0.625em;*/
-    /*min-inline-size: min-content;*/
-    /*border-width: 2px;*/
-    /*border-style: groove;*/
-    /*border-color: threedface;*/
-    /*border-image: initial;*/
-    /*margin-bottom: 20px;*/
 }
 
 .contact-us .details {
@@ -875,41 +850,17 @@ ul, menu, dir {
     padding-inline-start: 40px;
 }
 
-element.style {
-    position: relative;
-    display: inline-block;
-}
+
 
 .file a {
     color: #505050;
 }
-
-
-element.style {
-    visibility: hidden;
-    position: absolute;
-    top: 5px;
-    left: 10px;
-    width: 40px;
-    height: 10px;
-    border: 0px;
-    cursor: pointer;
-    opacity: 0.0001;
-}
-
 
 input[type="file" i] {
     align-items: baseline;
     color: inherit;
     text-align: start !important;
 }
-
-
-/*a:-webkit-any-link {*/
-/*    color: -webkit-link;*/
-/*    cursor: pointer;*/
-/*    text-decoration: underline;*/
-/*}*/
 
 .file-bar .drag-drop {
     font: 9px/19px 'Avenir LT W01 85 Heavy', Arial, Helvetica, sans-serif;
@@ -1125,61 +1076,6 @@ input, textarea, select, button, meter, progress {
 }
 
 
-/** Examples page
-
-http://wp.magento1.local/?page_id=247
-*/
-
-.examples {
-    background: #ededeb;
-    border-top: 1px dotted #b3b4b4;
-    position: relative;
-    padding: 30px 0;
-    font-size: 12px;
-    line-height: 18px;
-    width: 100%;
-    overflow: hidden;
-}
-
-.examples:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 0, rgba(0, 0, 0, 0) 100%);
-    z-index: 10;
-}
-
-.filter-section {
-    max-width: 980px;
-    margin: 5px auto 33px;
-    font-size: 15px;
-    line-height: 1.5;
-}
-
-.filter-section .choose-filter {
-    display: none;
-    color: #0086da;
-    cursor: pointer;
-    position: relative;
-    padding-right: 20px;
-    font: 14px/20px "Avenir LT W01 95 Black", Arial, Helvetica, sans-serif;
-}
-
-.filter-section > .holder {
-    text-align: center;
-}
-
-.filter-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-
 ul {
     display: block;
     list-style-type: disc;
@@ -1188,29 +1084,6 @@ ul {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 40px;
-}
-
-.filter-list li {
-    margin: 0 3px 7px 0;
-    background: #fff;
-    width: 120px;
-    height: 37px;
-    border-radius: 2px;
-    box-shadow: 0 1px 0 rgba(205, 209, 210, 0.004);
-    line-height: 37px;
-    cursor: pointer;
-    position: relative;
-}
-
-.filter-list li, .filter-section .check-box {
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 11px 0 0;
-}
-
-
-.filter-section input[type='checkbox'] {
-    left: -999px;
 }
 
 input[type="checkbox"], input[type="radio"] {
@@ -1272,92 +1145,12 @@ input {
     -webkit-writing-mode: horizontal-tb !important;
 }
 
-.filter-list label {
-    vertical-align: top;
-    display: block;
-}
-
 label {
     cursor: pointer;
     display: inline-block;
     vertical-align: middle;
 }
 
-.filter-list li {
-    margin: 0 3px 7px 0;
-    background: #fff;
-    width: 120px;
-    height: 37px;
-    border-radius: 2px;
-    box-shadow: 0 1px 0 rgba(205, 209, 210, 0.004);
-    line-height: 37px;
-    cursor: pointer;
-    position: relative;
-}
-
-.filter-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-
-.filter-list .active, .filter-list .reset, .filter-list .active .custom-select:after {
-    background: #349ee0;
-    color: #fff;
-}
-
-.filter-section .row {
-    margin: 0 0 20px;
-}
-
-.filter-section .title {
-    margin: 0 10px 0 0;
-    font-weight: bold;
-}
-
-.filter-section .row * {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.filter-section > .holder {
-    text-align: center;
-}
-
-.filter-list li, .filter-section .check-box {
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 11px 0 0;
-}
-
-.radio-btn {
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 1px solid #b6c3ca;
-    background: #fff;
-    margin: 0 5px 0 0;
-}
-
-.radio-btn:after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 8px;
-    height: 8px;
-    margin: -4px 0 0 -4px;
-    content: '';
-    border-radius: 50%;
-}
-
-
-input[type="radio"]:checked + .radio-btn:after {
-    background: #0085da;
-}
 
 
 /*
@@ -1429,7 +1222,7 @@ margin: 5px;
  */
 
 .social-icons {
-    padding-top: 4%;
+    padding-top: 30px;
 }
 .fa {
     padding: 20px;
@@ -1437,10 +1230,6 @@ margin: 5px;
     text-align: center;
     text-decoration: none;
     margin: 5px 2px;
-}
-
-.social-icons {
-
 }
 
 .fa:hover {
@@ -1556,9 +1345,6 @@ margin: 5px;
     transform: rotate(-45deg);
 }
 
-/*@media only screen and (max-width: 1100px) {*/
-/*  */
-/*}*/
 
 @media only screen and (max-width: 1565px) {
     #ajax-posts {
@@ -1616,9 +1402,9 @@ margin: 5px;
         min-height: calc(65vh - 80px);
     }
     .footer-holder {
-        width: 980px;
         margin: 0 auto;
         padding: 30px 0 36px;
+        width: auto;
     }
     #footer .nav {
         font: 14px/14px 'Avenir LT W01 95 Black', Arial, Helvetica, sans-serif;
@@ -1628,7 +1414,7 @@ margin: 5px;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 0 0 10%;
+        margin: 0 0 0 3%;
         float: none;
         width: auto;
     }
@@ -1674,18 +1460,4 @@ margin: 5px;
     }
 }
 
-@media only screen and (max-width: 1016px) {
-
-}
-
-/*@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){*/
-/*    .logo {*/
-/*        background: url(../bundles/intdevp2h/images/img-retina/main@2x.png?2) no-repeat;*/
-/*        background-size: 152px 84px;*/
-/*    }*/
-/*}*/
-
-@media only screen and (max-width: 1016px) {
-
-}
 
