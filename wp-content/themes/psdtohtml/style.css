@@ -1351,10 +1351,12 @@ margin: 5px;
         max-width: 1040px;
         margin: 0 auto;
     }
+    body {
+        min-width: 1040px;
+    }
 }
 
 @media only screen and (max-width: 1040px) {
-
     .logo {
         float: none;
         display: block;
@@ -1389,17 +1391,17 @@ margin: 5px;
         margin: 23px 0 0;
         display: none;
     }
+    #main {
+        min-height: calc(65vh - 80px);
+    }
 
     #ajax-posts {
-        max-width: 500px;
-        margin: 0 auto;
+        padding: 35px;
     }
-    #main {
-        overflow: hidden;
-        background: #ededeb;
-        border-top: 1px dotted #b3b4b4;
-        position: relative;
-        min-height: calc(65vh - 80px);
+
+    .small-12 {
+        padding: 15px 15px 15px 23px;
+        width: 480px;
     }
     .footer-holder {
         margin: 0 auto;
@@ -1461,3 +1463,15 @@ margin: 5px;
 }
 
 
+
+@media only screen and (max-width: 520px) {
+    body {
+        min-width: 520px;
+    }
+
+    #ajax-posts {
+        max-width: 520px;
+        margin: 0 auto;
+        padding: 5px;
+    }
+}
