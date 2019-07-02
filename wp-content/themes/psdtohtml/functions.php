@@ -55,20 +55,20 @@ function more_post_ajax()
         $imageSize = array(200, 200);
         $postTitle = $postContent->post_title;
         ?>
-        <div class="catalog-list__item">
+        <div class="catalog_list_item">
             <a href=<?php echo $baseURL . '/' . $postContent->post_name; ?>>
-                <div class="category-image">
+                <div class="catalog_list_item_image">
                     <?php
                     if (has_post_thumbnail($postId)): ?>
                         <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($postId), $imageSize); ?>
-                        <img class="catalog-list__image" src="<?php echo $image[0]; ?>" alt="<?php echo $postTitle;?>">
+                        <img class="catalog_item_image" src="<?php echo $image[0]; ?>" alt="<?php echo $postTitle;?>">
                     <?php else : ?>
-                        <img class="catalog-list__image_default"
+                        <img class="catalog_item_image_default"
                              src="<?php echo $baseURL; ?>/wp-content/themes/psdtohtml/images/psdtohtml-placeholder.png" alt="<?php echo $postTitle;?>">
                     <?php endif; ?></div>
-                <div class="product_title">
-                    <h1><?php echo $postTitle;?></h1></div>
-                <div class="product_description"><?php echo $postContent->post_content; ?></div>
+                <div class="catalog_list_item_title">
+                    <h1 class="catalog_item_title"><?php echo $postTitle;?></h1></div>
+                <div class="catalog_list_item_description"><?php echo $postContent->post_content; ?></div>
             </a>
         </div>
     <?php
@@ -100,20 +100,20 @@ function sort_date_ajax()
         $imageSize = array(200, 200);
         $postTitle = $postContent->post_title;
         ?>
-        <div class="catalog-list__item">
+        <div class="catalog_list_item">
             <a href=<?php echo $baseURL . '/' . $postContent->post_name; ?>>
-                <div class="category-image">
+                <div class="catalog_list_item_image">
                     <?php
                     if (has_post_thumbnail($postId)): ?>
                         <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($postId), $imageSize); ?>
-                        <img class="catalog-list__image" src="<?php echo $image[0]; ?>" alt="<?php echo $postTitle;?>">
+                        <img class="catalog_item_image" src="<?php echo $image[0]; ?>" alt="<?php echo $postTitle;?>">
                     <?php else : ?>
-                        <img class="catalog-list__image_default"
+                        <img class="catalog_item_image_default"
                              src="<?php echo $baseURL; ?>/wp-content/themes/psdtohtml/images/psdtohtml-placeholder.png" alt="<?php echo $postTitle;?>">
                     <?php endif; ?></div>
-                <div class="product_title">
-                    <h1><?php echo $postTitle;?></h1></div>
-                <div class="product_description"><?php echo $postContent->post_content; ?></div>
+                <div class="catalog_list_item_title">
+                    <h1 class="catalog_item_title"><?php echo $postTitle;?></h1></div>
+                <div class="catalog_list_item_description"><?php echo $postContent->post_content; ?></div>
             </a>
         </div>
     <?php
