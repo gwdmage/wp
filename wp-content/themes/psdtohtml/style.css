@@ -1161,8 +1161,8 @@ Category page
  */
 
 #ajax-posts {
-    max-width: 1016px;
-    margin: 0 auto;
+    max-width: 1306px;
+    margin: 30px auto;
     font-size: 0;
     letter-spacing: -4px;
 }
@@ -1173,7 +1173,7 @@ Category page
     display: inline-block;
     vertical-align: top;
     /*margin: 0 2px 33px 0;*/
-    padding: 0 14px;
+    padding: 0 30px;
     font-size: 12px;
     letter-spacing: 0;
     text-align: center;
@@ -1186,7 +1186,6 @@ Category page
 
 .catalog_item_image {
     width: 100%;
-    max-width: 350px;
     display: block;
 }
 
@@ -1208,6 +1207,8 @@ Category page
     width: auto;
     height: auto;
     padding: 15px;
+    font: 16px/22px 'Avenir LT W01 55 Roman', Arial, Helvetica, sans-serif;
+    line-height: 1.75;
 }
 
 .catalog_item_image_default {
@@ -1505,10 +1506,24 @@ Category page
     }
 }
 
-
 @media only screen and (max-width: 750px) {
     .contact-us {
         width: auto;
         margin: 30px;
+    }
+    .catalog_list_item {
+        width: 50%;
+        margin: 0 0 33px;
+        font-size: 11px;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    .catalog_list_item {
+        width: 100%;
+        float: none;
+        margin: 0 auto 33px;
+        padding: 0 15px;
     }
 }
