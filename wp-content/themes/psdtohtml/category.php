@@ -9,7 +9,8 @@
     <div id="main">
         <div id="ajax-posts" class="row">
             <?php
-            $postsPerPage = 3;
+            /** Start post qty displayed on category page*/
+            $postsPerPage = 6;
             $args = array(
                 'post_type' => 'product',
                 'posts_per_page' => $postsPerPage,
@@ -47,7 +48,7 @@
             ?>
         </div>
         <div class="bottom-navigation">
-            <button id="more_posts" data-qty="3" class="bottom-navigation-button">Load More</button>
+            <button id="more_posts" data-qty="<?php echo $postsPerPage; ?>" class="bottom-navigation-button">Load More</button>
             <button id="sort-by-date" data-current-sort-order="ASC" class="bottom-navigation-button">Sort By Date &#9660;</button>
         </div>
     </div>
