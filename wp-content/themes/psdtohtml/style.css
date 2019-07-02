@@ -275,8 +275,8 @@ input, textarea, select {
 
 .footer-holder {
     margin: 0 auto;
-    padding: 30px 0 36px;
-    width: 980px;
+    padding: 30px 5px 36px 15px;
+    width: 620px;
 }
 
 #footer .nav {
@@ -285,7 +285,7 @@ input, textarea, select {
     letter-spacing: 1px;
     float: left;
     width: 293px;
-    margin: -3px 47px 0 20%;
+    margin: 0 20px 0 0;
 }
 
 #footer .news {
@@ -1373,13 +1373,6 @@ Category page
     content: '';
 }
 
-/*@media only screen and (max-width: 1565px) {*/
-/*    #ajax-posts {*/
-/*        max-width: 940px;*/
-/*        margin: 0 auto;*/
-/*    }*/
-/*}*/
-
 @media only screen and (max-width: 1040px) {
     .logo {
         float: none;
@@ -1430,13 +1423,38 @@ Category page
     .catalog-list__item {
         padding: 15px 15px 15px 23px;
     }
+
+    .woocommerce div.product div.images.woocommerce-product-gallery {
+        position: relative;
+        margin: 0;
+    }
+
+    .woocommerce div.product div.images {
+        margin-bottom: 0;
+    }
+
+    .woocommerce-product-gallery {
+        width: auto;
+        height: auto;
+    }
+
+    .woocommerce div.product div.images .flex-control-thumbs {
+        overflow: hidden;
+        zoom: 1;
+        margin: 0;
+        padding: 0 5% 0 5%;
+    }
+
+}
+
+@media only screen and (max-width: 620px) {
     .footer-holder {
         margin: 0 auto;
         padding: 30px 0 36px;
         width: auto;
     }
-    #footer .nav {
 
+    #footer .nav {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1462,29 +1480,7 @@ Category page
         text-decoration: none;
         margin: 5px 2px;
     }
-
-    .woocommerce div.product div.images.woocommerce-product-gallery {
-        position: relative;
-        margin: 0;
-    }
-
-    .woocommerce div.product div.images {
-        margin-bottom: 0;
-    }
-
-    .woocommerce-product-gallery {
-        width: auto;
-        height: auto;
-    }
-
-    .woocommerce div.product div.images .flex-control-thumbs {
-        overflow: hidden;
-        zoom: 1;
-        margin: 0;
-        padding: 0 5% 0 5%;
-    }
 }
-
 
 
 @media only screen and (max-width: 520px) {
@@ -1516,8 +1512,6 @@ Category page
         float: none !important;
     }
 }
-
-
 
 
 @media only screen and (max-width: 750px) {
