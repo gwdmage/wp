@@ -55,20 +55,21 @@ function more_post_ajax()
         $imageSize = array(200, 200);
         $postTitle = $postContent->post_title;
         ?>
-        <div class="small-12 large-4 columns">
-            <div class="product_block">
-                <?php
-                if (has_post_thumbnail($postId)): ?>
-                    <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($postId), $imageSize); ?>
-                    <img class="product_image" src="<?php echo $image[0]; ?>">
-                <?php else : ?>
-                    <img class="default_product_image"
-                         src="http://wp.magento1.local/wp-content/themes/psdtohtml/images/psdtohtml-placeholder.png">
-                <?php endif; ?>
-                <div class="product_title"><a href=<?php echo $baseURL . '/' . $postContent->post_name; ?>>
-                        <h1><?php echo $postTitle; ?></h1></a></div>
+        <div class="catalog-list__item">
+            <a href=<?php echo $baseURL . '/' . $postContent->post_name; ?>>
+                <div class="category-image">
+                    <?php
+                    if (has_post_thumbnail($postId)): ?>
+                        <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($postId), $imageSize); ?>
+                        <img class="catalog-list__image" src="<?php echo $image[0]; ?>" alt="<?php echo $postTitle;?>">
+                    <?php else : ?>
+                        <img class="catalog-list__image_default"
+                             src="<?php echo $baseURL; ?>/wp-content/themes/psdtohtml/images/psdtohtml-placeholder.png" alt="<?php echo $postTitle;?>">
+                    <?php endif; ?></div>
+                <div class="product_title">
+                    <h1><?php echo $postTitle;?></h1></div>
                 <div class="product_description"><?php echo $postContent->post_content; ?></div>
-            </div>
+            </a>
         </div>
     <?php
     endwhile;
@@ -99,20 +100,21 @@ function sort_date_ajax()
         $imageSize = array(200, 200);
         $postTitle = $postContent->post_title;
         ?>
-        <div class="small-12 large-4 columns">
-            <div class="product_block">
-                <?php
-                if (has_post_thumbnail($postId)): ?>
-                    <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($postId), $imageSize); ?>
-                    <img class="product_image" src="<?php echo $image[0]; ?>">
-                <?php else : ?>
-                    <img class="default_product_image"
-                         src="http://wp.magento1.local/wp-content/themes/psdtohtml/images/psdtohtml-placeholder.png">
-                <?php endif; ?>
-                <div class="product_title"><a href=<?php echo $baseURL . '/' . $postContent->post_name; ?>>
-                        <h1><?php echo $postTitle; ?></h1></a></div>
+        <div class="catalog-list__item">
+            <a href=<?php echo $baseURL . '/' . $postContent->post_name; ?>>
+                <div class="category-image">
+                    <?php
+                    if (has_post_thumbnail($postId)): ?>
+                        <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($postId), $imageSize); ?>
+                        <img class="catalog-list__image" src="<?php echo $image[0]; ?>" alt="<?php echo $postTitle;?>">
+                    <?php else : ?>
+                        <img class="catalog-list__image_default"
+                             src="<?php echo $baseURL; ?>/wp-content/themes/psdtohtml/images/psdtohtml-placeholder.png" alt="<?php echo $postTitle;?>">
+                    <?php endif; ?></div>
+                <div class="product_title">
+                    <h1><?php echo $postTitle;?></h1></div>
                 <div class="product_description"><?php echo $postContent->post_content; ?></div>
-            </div>
+            </a>
         </div>
     <?php
     endwhile;
