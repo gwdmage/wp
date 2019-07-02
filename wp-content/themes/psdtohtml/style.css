@@ -271,12 +271,12 @@ input, textarea, select {
     z-index: 11;
     padding: 0 0 11px;
     width: 100%;
-    height: 30px;
 }
 
 .footer-holder {
     margin: 0 auto;
     padding: 30px 0 36px;
+    width: 980px;
 }
 
 #footer .nav {
@@ -1192,14 +1192,14 @@ margin: 5px;
  .product_block {
     padding: 35px;
     border: 1px solid grey;
-    width: 450px;
+    width: 400px;
     background: #ededeb;
     display: block;
 
 }
 
 #ajax-posts {
-    max-width: 1600px;
+    max-width: 1420px;
     margin: 0 auto;
 }
 
@@ -1345,15 +1345,22 @@ margin: 5px;
     transform: rotate(-45deg);
 }
 
+#footer:after {
+    position: absolute;
+    bottom: 56px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #dee0e1;
+    content: '';
+}
 
 @media only screen and (max-width: 1565px) {
     #ajax-posts {
         max-width: 1040px;
         margin: 0 auto;
     }
-    /*body {*/
-    /*    min-width: 1040px;*/
-    /*}*/
+
 }
 
 @media only screen and (max-width: 1040px) {
@@ -1409,14 +1416,11 @@ margin: 5px;
         width: auto;
     }
     #footer .nav {
-        font: 12px/12px 'Avenir LT W01 95 Black', Arial, Helvetica, sans-serif;
-        text-transform: uppercase;
-        letter-spacing: 2px;
 
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 0 0 7%;
+        margin: 0 0 0 5%;
         float: none;
         width: auto;
     }
@@ -1426,8 +1430,6 @@ margin: 5px;
         margin: 0 5% 0 0;
     }
     .social-icons {
-        margin: 1em 0 0 0;
-        padding-top: 4%;
         text-align: center;
     }
     .fa {
@@ -1437,10 +1439,6 @@ margin: 5px;
         text-decoration: none;
         margin: 5px 2px;
     }
-    .add .copyright {
-        font-size: 18px;
-    }
-
     .woocommerce div.product div.images.woocommerce-product-gallery {
         position: relative;
         margin: 0;
@@ -1466,7 +1464,7 @@ margin: 5px;
 
 @media only screen and (max-width: 520px) {
     body {
-        min-width: 520px;
+        min-width: 320px;
     }
 
     #ajax-posts {
