@@ -124,7 +124,7 @@ function sort_date_ajax()
     die($out);
 }
 
-function get_page_by_id($id)
+function get_page_url_by_id($id)
 {
     $pageObject = get_page($id);
     return $pageObject->post_name;

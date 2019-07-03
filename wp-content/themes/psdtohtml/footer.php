@@ -7,9 +7,9 @@ $baseURL = get_site_url();
         <nav class="nav" role="navigation">
             <ul>
                 <li><a href="/">HOME</a></li>
-                <li><a href="<?php echo $baseURL . '/' . get_page_by_id(169) . '/'; ?>">ABOUT US</a></li>
-                <li><a href="<?php echo $baseURL . '/' . get_page_by_id(298) . '/'; ?>">OUR WORK</a></li>
-                <li><a href="<?php echo $baseURL . '/' . get_page_by_id(194) . '/'; ?>" target="_blank">Contact form</a></li>
+                <li><a href="<?php echo $baseURL . '/' . get_page_url_by_id(169) . '/'; ?>">ABOUT US</a></li>
+                <li><a href="<?php echo $baseURL . '/' . get_page_url_by_id(298) . '/'; ?>">OUR WORK</a></li>
+                <li><a href="<?php echo $baseURL . '/' . get_page_url_by_id(194) . '/'; ?>" target="_blank">Contact form</a></li>
                 <li class="parent-drop">
                     <a class="all" href="#">SERVICES</a>
                     <div class="drop" style="display: none;">
