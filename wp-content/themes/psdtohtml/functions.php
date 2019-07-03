@@ -39,7 +39,7 @@ function more_post_ajax()
     $postsPerPage = $_POST["postsPerPage"];
     $order = $_POST["sort_order"];
     $args = array(
-        'post_type' => 'product',
+        'post_type' => 'post',
         'posts_per_page' => $postsPerPage,
         'offset' => $offset,
         'orderby' => 'publish_date',
@@ -85,7 +85,7 @@ function sort_date_ajax()
     $postsPerPage = $_POST["postsPerPage"];
     $order = $_POST["sort_order"];
     $args = array(
-        'post_type' => 'product',
+        'post_type' => 'post',
         'posts_per_page' => $postsPerPage,
         'orderby' => 'publish_date',
         'order' => $order,
@@ -128,5 +128,8 @@ function get_page_by_id($id)
     return $pageObject->post_name;
 }
 
+
+add_theme_support( 'post-thumbnails', array( 'post' ) ); //only for posts
+add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
 add_action('wp_ajax_nopriv_sort_date_ajax', 'sort_date_ajax');
 add_action('wp_ajax_sort_date_ajax', 'sort_date_ajax');

@@ -12,7 +12,7 @@
             /** Start post qty displayed on category page*/
             $postsPerPage = 6;
             $args = array(
-                'post_type' => 'product',
+                'post_type' => 'post',
                 'posts_per_page' => $postsPerPage,
                 'orderby' => 'publish_date',
                 'order' => 'DESC',
