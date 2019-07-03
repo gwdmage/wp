@@ -122,5 +122,11 @@ function sort_date_ajax()
     die($out);
 }
 
+function get_page_by_id($id)
+{
+    $pageObject = get_page($id);
+    return $pageObject->post_name;
+}
+
 add_action('wp_ajax_nopriv_sort_date_ajax', 'sort_date_ajax');
 add_action('wp_ajax_sort_date_ajax', 'sort_date_ajax');
