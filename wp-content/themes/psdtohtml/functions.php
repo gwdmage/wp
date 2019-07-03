@@ -19,6 +19,8 @@ add_action('wp_enqueue_scripts', 'enqueue_scripts');
 
 if (function_exists('add_theme_support')) {
     add_theme_support('menus');
+    add_theme_support( 'post-thumbnails', array( 'post' ) ); //only for posts
+    add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
 }
 
 add_filter('wp_nav_menu_items', 'my_wp_nav_menu_items', 10, 2);
@@ -129,7 +131,5 @@ function get_page_by_id($id)
 }
 
 
-add_theme_support( 'post-thumbnails', array( 'post' ) ); //only for posts
-add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
 add_action('wp_ajax_nopriv_sort_date_ajax', 'sort_date_ajax');
 add_action('wp_ajax_sort_date_ajax', 'sort_date_ajax');
