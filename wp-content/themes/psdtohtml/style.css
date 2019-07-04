@@ -1211,8 +1211,26 @@ Category page
     line-height: 1.75;
 }
 
+.catalog_list_item_description .wp-block-gallery{
+    display: none !important;
+}
+
 .catalog_item_image_default {
     max-width: 100%;
+}
+
+.breadcrumbs {
+    max-width: 1600px;
+    position: relative;
+    margin: 4px auto;
+    color: #999;
+    font-size: 11px;
+    font-size: .6875rem;
+    line-height: 2.5454545455;
+}
+
+.breadcrumbs__list-item {
+    display: inline;
 }
 
 .bottom-navigation {

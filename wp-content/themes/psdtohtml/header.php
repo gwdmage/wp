@@ -32,7 +32,6 @@
     <script type="text/javascript">
         var clicks = 0;
         $(".menu").on("click", function () {
-            console.log('if' + clicks);
             if ((clicks % 2) === 0){
                 $("#header").addClass('active-panel');
             } else{
@@ -40,7 +39,6 @@
             }
             ++clicks;
         });
-        console.log(clicks);
         clicks = 0;
     </script>
 </header>
