@@ -176,9 +176,10 @@ address {
 }
 
 .menu-top-menu-container ul li {
-    display: inline-block;
+    /*display: inline-block;*/
     padding: 0 7px 0 7px;
     float: left;
+    position: relative;
 }
 
 /*.top-menu li{*/
@@ -226,6 +227,9 @@ li {
     box-shadow: 0 2px 70px 0 rgba(0,0,0,.3);
     background: #f5f5f4;
     border: 0;
+    position:absolute;
+    float: left;
+    left: 50%;
     z-index: 5;
 }
 
@@ -234,7 +238,7 @@ li {
     color: #000;
     float: none;
     display: block;
-    padding: 10px 18px 9px;
+    /*padding: 10px 18px 9px;*/
     border-bottom: 1px solid transparent;
     margin: 0 0 -1px;
 }
@@ -242,6 +246,10 @@ li {
 #nav ul ul li {
     float: none;
     border-top: 1px dotted #a3a6a8;
+}
+
+#nav ul ul li:first-child {
+    border: 0
 }
 
 #nav ul ul:after, .login-form:after {
@@ -258,6 +266,13 @@ li {
     margin-left: -8px;
 }
 
+#nav ul ul li:hover {
+    background: #fff;
+    color: #000;
+    padding-bottom: 9px;
+    border-color: #a3a6a8;
+}
+
 #nav ul ul:before {
     position: absolute;
     top: -22px;
@@ -268,7 +283,7 @@ li {
     background: url(../bundles/intdevp2h/images/transparent5.png);
 }
 
-.menu-top-menu-container > ul li:hover {
+.menu-top-menu-container > ul li:hover:not(.menu-item-type-post_type) {
     background: #343b3e;
 }
 
