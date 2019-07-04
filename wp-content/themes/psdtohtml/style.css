@@ -21,7 +21,6 @@ body {
 }
 
 #header {
-    /*min-width: 1000px;*/
     text-shadow: 0 1px 0 #000;
     background: #485053;
     background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -35,6 +34,7 @@ body {
     left: 0;
     z-index: 100;
     position: relative;
+    height: 68px;
 }
 
 header, footer, article, section, hgroup, nav, figure {
@@ -87,6 +87,10 @@ a {
     text-decoration: none;
     transition: color .2s ease, background .2s ease, opacity .2s ease, border-color .2s ease;
     color: #0086da;
+}
+
+#header a {
+    color: white;
 }
 
 address {
@@ -151,8 +155,10 @@ address {
 
 /* Start navigation menu */
 
+
+
 .menu-top-menu-container {
-    margin: 0 0 0 -50px;
+    /*margin: 0 0 0 -50px;*/
     /*border-right: 1px solid rgba(255, 255, 255, .1);*/
     letter-spacing: 1px;
     font: 13px/67px 'Avenir LT W01 55 Roman', Arial, Helvetica, sans-serif;
@@ -170,7 +176,8 @@ address {
 
 .menu-top-menu-container ul li {
     display: inline-block;
-    /*margin: 0 0 0 10px;*/
+    padding: 0 7px 0 7px;
+    float: left;
 }
 
 /*.top-menu li{*/
@@ -183,8 +190,13 @@ address {
 }
 
 .menu-top-menu-container ul li ul li {
+    height: auto;
+    color: #000;
+    float: none;
     display: block;
-    background: linear-gradient(to bottom, #485053 0, #3b4447 100%);
+    padding: 10px 18px 9px;
+    border-bottom: 1px solid transparent;
+    margin: 0 0 -1px;
 }
 
 
@@ -201,33 +213,101 @@ li {
     display:inline-block;
 }
 
-.sub-menu li:after {
+#nav ul ul {
+    text-align: left;
+    white-space: nowrap;
+    text-shadow: none;
+    letter-spacing: 0;
+    top: 80px;
+    padding: 6px 12px;
+    border-radius: 2px;
+    font: 16px/20px 'Avenir LT W01 55 Roman',Arial,Helvetica,sans-serif;
+    box-shadow: 0 2px 70px 0 rgba(0,0,0,.3);
+    background: #f5f5f4;
+    border: 0;
+    z-index: 5;
+}
+
+#nav ul ul a {
+    height: auto;
+    color: #000;
+    float: none;
+    display: block;
+    padding: 10px 18px 9px;
+    border-bottom: 1px solid transparent;
+    margin: 0 0 -1px;
+}
+
+#nav ul ul li {
+    float: none;
+    border-top: 1px dotted #a3a6a8;
+}
+
+#nav ul ul:after, .login-form:after {
+    bottom: 100%;
+    border: solid transparent;
+    content: '';
+    height: 0;
+    width: 0;
     position: absolute;
-    right: 550px;
-    top: 29px;
-    content: '';
-    font: 8px/12px 'SSStandard';
+    border-color: rgba(218,225,229,0);
+    border-bottom-color: #f5f5f4;
+    border-width: 8px;
+    left: 50%;
+    margin-left: -8px;
+}
+
+#nav ul ul:before {
+    position: absolute;
+    top: -22px;
+    left: 0;
+    height: 22px;
+    width: 100%;
+    content: '';
+    background: url(../bundles/intdevp2h/images/transparent5.png);
+}
+
+.menu-top-menu-container > ul li:hover {
+    background: #343b3e;
 }
 
 .top-menu li:hover .sub-menu {
     display: block;
+    background: #fff;
+    color: #000;
+    padding-bottom: 9px;
+    border-color: #a3a6a8;
 }
 
-.menu-top-menu-container ul :hover {
-    background: #343b3e;
+
+
+/*.menu-top-menu-container > ul:hover {*/
+/*    background: #343b3e;*/
+/*}*/
+
+
+.top-menu .menu-item-has-children > a:after {
+    right: 20px;
+    margin-left: 3px;
+    top: 29px;
+    content: "\f107";
+    font-family: 'FontAwesome', arial, serif;
 }
+
 
 /*Order Now item*/
 #menu-item-40 {
     display: inline-block;
     background: linear-gradient(135deg, #349ee0 0, #0086da 40%, #0086da 100%);
+    min-width: 120px;
 }
 
 #menu-item-40 a {
     color: #fff;
     text-shadow: 0 1px 0 rgba(0, 0, 0, .3);
-    font-family: 'Avenir LT W01 95 Black', Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-family: 'Avenir LT W01 95 Black',Arial,Helvetica,sans-serif;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 /* end navigation menu */
@@ -1211,26 +1291,8 @@ Category page
     line-height: 1.75;
 }
 
-.catalog_list_item_description .wp-block-gallery{
-    display: none !important;
-}
-
 .catalog_item_image_default {
     max-width: 100%;
-}
-
-.breadcrumbs {
-    max-width: 1600px;
-    position: relative;
-    margin: 4px auto;
-    color: #999;
-    font-size: 11px;
-    font-size: .6875rem;
-    line-height: 2.5454545455;
-}
-
-.breadcrumbs__list-item {
-    display: inline;
 }
 
 .bottom-navigation {
@@ -1384,7 +1446,13 @@ Category page
     content: '';
 }
 
+
+
 @media only screen and (max-width: 1040px) {
+    #header {
+        height: auto;
+    }
+
     .logo {
         float: none;
         display: block;
@@ -1420,6 +1488,11 @@ Category page
         box-shadow: inset 0 1px 0 0 #35393b;
         margin: 23px 0 0;
         display: none;
+
+    }
+
+    .menu-top-menu-container ul li {
+        float: none;
     }
 
     #main {
@@ -1434,6 +1507,28 @@ Category page
     .catalog_list_item {
         /*padding: 15px 15px 15px 23px;*/
     }
+
+    .woocommerce div.product div.images.woocommerce-product-gallery {
+        position: relative;
+        margin: 0;
+    }
+
+    .woocommerce div.product div.images {
+        margin-bottom: 0;
+    }
+
+    .woocommerce-product-gallery {
+        width: auto;
+        height: auto;
+    }
+
+    .woocommerce div.product div.images .flex-control-thumbs {
+        overflow: hidden;
+        zoom: 1;
+        margin: 0;
+        padding: 0 5% 0 5%;
+    }
+
 }
 
 @media only screen and (max-width: 620px) {
@@ -1471,6 +1566,26 @@ Category page
     }
 }
 
+@media only screen and (max-width: 700px) {
+    #header {
+        border-top: 1px solid #2d3235;
+        box-shadow: 0 2px 3px 0 rgba(0,0,0,.3);
+    }
+
+    #menu-item-40 {
+        display: list-item;
+        background: #485053;
+    }
+
+    .menu-top-menu-container ul li {
+        display: block;
+        float: none;
+        height: 47px;
+        line-height: 47px;
+        border-top: 1px solid #2d3235;
+        border-top: 1px dotted #a3a6a8
+    }
+}
 
 @media only screen and (max-width: 520px) {
     body {
@@ -1491,6 +1606,25 @@ Category page
 
     .contact-us {
         width: auto;
+    }
+
+    .panel .contacts span, .panel .contacts a {
+        display: inline-block;
+        vertical-align: top;
+        float: none;
+    }
+
+    #header .contacts {
+        display: none;
+        vertical-align: top;
+        position: static;
+        margin: 20px 0 0;
+        float: none;
+    }
+
+    #header.active-panel .contacts {
+        display: block;
+        text-align: center;
     }
 
     input.btn {
