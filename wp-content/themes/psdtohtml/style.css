@@ -1295,6 +1295,10 @@ Category page
     margin: 0 auto;
 }
 
+.catalog_list_item_description .wp-block-gallery{
+    display: none !important;
+}
+
 .catalog_list_item_description {
     margin-left: auto;
     margin-right: auto;
@@ -1600,28 +1604,6 @@ Category page
     .catalog_list_item {
         /*padding: 15px 15px 15px 23px;*/
     }
-
-    .woocommerce div.product div.images.woocommerce-product-gallery {
-        position: relative;
-        margin: 0;
-    }
-
-    .woocommerce div.product div.images {
-        margin-bottom: 0;
-    }
-
-    .woocommerce-product-gallery {
-        width: auto;
-        height: auto;
-    }
-
-    .woocommerce div.product div.images .flex-control-thumbs {
-        overflow: hidden;
-        zoom: 1;
-        margin: 0;
-        padding: 0 5% 0 5%;
-    }
-
 }
 
 @media only screen and (max-width: 620px) {
