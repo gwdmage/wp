@@ -1168,11 +1168,9 @@ Category page
 }
 
 .catalog_list_item {
-    position: relative;
     width: 33%;
     display: inline-block;
     vertical-align: top;
-    /*margin: 0 2px 33px 0;*/
     padding: 0 30px;
     font-size: 12px;
     letter-spacing: 0;
@@ -1184,13 +1182,13 @@ Category page
     padding: 8px 5px 5px;
 }
 
+.catalog_list_item_image {
+    margin-bottom: 10%;
+}
+
 .catalog_item_image {
     width: 100%;
     display: block;
-}
-
-.catalog_list_item_image {
-    margin-bottom: 10%;
 }
 
 .catalog_list_item_title {
@@ -1219,6 +1217,10 @@ Category page
     max-width: 100%;
 }
 
+/*
+    Post Page
+*/
+
 .breadcrumbs {
     max-width: 1600px;
     position: relative;
@@ -1229,9 +1231,70 @@ Category page
     line-height: 2.5454545455;
 }
 
-.breadcrumbs__list-item {
+/*.breadcrumbs_inner {*/
+/*}*/
+
+/*.breadcrumbs_list {*/
+/*}*/
+
+.breadcrumbs_list_item {
     display: inline;
 }
+
+.breadcrumbs_link {
+    color: #505050;
+}
+
+.post_single {
+    max-width: 1306px;
+    margin: 30px auto;
+    font-size: 0;
+    letter-spacing: -4px;
+}
+.post_item {
+    width: 100%;
+    padding: 0 30px;
+    font-size: 12px;
+    letter-spacing: 0;
+}
+
+.post_item a {
+    color: #505050;
+}
+
+.post_item_header {
+    margin: 5px;
+    float: right;
+     max-width: 66.66666%;
+    text-align: left;
+    width: 55%;
+}
+.post_item_title {
+    margin: 0 auto;
+}
+
+.post_item_image {
+    width: 500px;
+    float: left;
+}
+
+.post_image {
+    width: 100%;
+}
+
+.post_item_image_default {
+    max-width: 100%;
+}
+
+
+.post_item_description {
+    float: right;
+    width: 55%;
+    text-align: left;
+    font: 16px/22px 'Avenir LT W01 55 Roman', Arial, Helvetica, sans-serif;
+    line-height: 1.75;
+}
+
 
 .bottom-navigation {
     text-align: center;

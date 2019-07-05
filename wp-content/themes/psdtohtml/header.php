@@ -34,12 +34,12 @@
         $(".menu").on("click", function () {
             if ((clicks % 2) === 0){
                 $("#header").addClass('active-panel');
+                clicks++;
             } else{
                 $("#header").removeClass('active-panel');
+                clicks--;
             }
-            ++clicks;
         });
-        clicks = 0;
     </script>
 </header>
 

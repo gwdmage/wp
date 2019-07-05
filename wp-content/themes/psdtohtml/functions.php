@@ -124,6 +124,10 @@ function sort_date_ajax()
     die($out);
 }
 
+add_action('wp_ajax_nopriv_sort_date_ajax', 'sort_date_ajax');
+add_action('wp_ajax_sort_date_ajax', 'sort_date_ajax');
+
+
 function get_page_url_by_id($id)
 {
     $pageObject = get_page($id);
@@ -142,6 +146,3 @@ function breadcrumbs($categoryObj)
     }
     return array_reverse($categoryArr);
 }
-
-add_action('wp_ajax_nopriv_sort_date_ajax', 'sort_date_ajax');
-add_action('wp_ajax_sort_date_ajax', 'sort_date_ajax');
