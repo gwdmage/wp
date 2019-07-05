@@ -40,6 +40,24 @@
             ++clicks;
         });
         clicks = 0;
+
+        $(".menu-item-has-children").on("click", function () {
+            var dropClassName = "drop-active";
+            var mobileMedia = 700;
+            var windowWidth = $(window).width();
+            var dropActiveStatus = $(this).hasClass(dropClassName);
+            if (windowWidth <= mobileMedia && !dropActiveStatus) {
+                $(this).addClass(dropClassName);
+            } else {
+                $(this).removeClass(dropClassName);
+            }
+        });
+
+        $("#menu-item-40").on("click", function () {
+            var hoverClassName = "hover";
+            $(this).addClass(hoverClassName);
+        })
+
     </script>
 </header>
 
