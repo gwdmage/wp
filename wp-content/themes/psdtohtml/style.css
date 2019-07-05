@@ -617,7 +617,7 @@ h2.main-title {
     border-top: 1px dotted #b3b4b4;
     position: relative;
     min-height: calc(75vh - 80px);
-    /*min-height: 100%;*/
+    padding-bottom: 50px;
 }
 
 .contact-us {
@@ -1318,20 +1318,20 @@ Category page
 */
 
 .breadcrumbs {
-    max-width: 1600px;
     position: relative;
-    margin: 4px auto;
-    color: #999;
-    font-size: 11px;
-    font-size: .6875rem;
-    line-height: 2.5454545455;
+    max-width: 1306px;
+    margin: 0 auto;
 }
 
-/*.breadcrumbs_inner {*/
-/*}*/
+.breadcrumbs_inner {
+    text-align: left;
+}
 
-/*.breadcrumbs_list {*/
-/*}*/
+ul.breadcrumbs_list li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
 
 .breadcrumbs_list_item {
     display: inline;
@@ -1350,42 +1350,42 @@ Category page
 .post_item {
     width: 100%;
     padding: 0 30px;
-    font-size: 12px;
     letter-spacing: 0;
+    height: auto;
 }
 
+.post_element {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 30px;
+    font-size: 12px;
+}
 .post_item a {
     color: #505050;
 }
 
 .post_item_header {
-    margin: 5px;
-    float: right;
-    max-width: 66.66666%;
+    width: 50%;
     text-align: left;
-    width: 55%;
+
 }
 .post_item_title {
     margin: 0 auto;
 }
 
 .post_item_image {
-    width: 500px;
     float: left;
+    width: 50%;
+    padding: 0px;
 }
 
 .post_image {
     width: 100%;
+    display: block;
 }
-
-.post_item_image_default {
-    max-width: 100%;
-}
-
 
 .post_item_description {
-    float: right;
-    width: 55%;
     text-align: left;
     font: 16px/22px 'Avenir LT W01 55 Roman', Arial, Helvetica, sans-serif;
     line-height: 1.75;
@@ -1601,8 +1601,31 @@ Category page
         font-size: 11px;
     }
 
-    .catalog_list_item {
-        /*padding: 15px 15px 15px 23px;*/
+    .post_single {
+        margin: 0px auto;
+    }
+
+    .post_element {
+        width: 100%;
+        margin: 15px;
+    }
+
+    .post_item_header {
+        width: 100%;
+        text-align: center;
+    }
+
+    .post_item_image {
+        width: 97%;
+    }
+
+    .post_image {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    .post_item_description {
+        text-align: center;
     }
 }
 
@@ -1659,6 +1682,10 @@ Category page
         line-height: 47px;
         border-top: 1px solid #2d3235;
         border-top: 1px dotted #a3a6a8
+    }
+    .post_image {
+        width: 100%;
+        margin: 0;
     }
 }
 

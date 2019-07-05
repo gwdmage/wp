@@ -10,8 +10,8 @@ $baseURL = get_site_url();
 $postId = get_the_ID(); //get ID of current post
 $postObject = get_post($postId);
 $postTitle = get_the_title($postObject);
-$postImageSrc = get_the_post_thumbnail_url($postObject, array(400, 400));
 $defaultImage = "wp-content/themes/psdtohtml/images/psdtohtml-placeholder.png";
+$postImageSrc = has_post_thumbnail($postId) ? get_the_post_thumbnail_url($postObject, array(400, 400)) : $baseURL . '/' . $defaultImage;
 $categoryTerms = get_the_category($postId);
 $categoryObj = reset($categoryTerms);
 $breadcrumbsArr = breadcrumbs($categoryObj);
@@ -42,18 +42,11 @@ $postContent = str_replace(']]>', ']]&gt;', $postContent);
     <div id="main">
         <div class="post_single">
             <div class="post_item">
-                <div class="post_item_header"><h1 class="post_item_title"><?php echo $postTitle; ?></h1></div>
-                <?php if (has_post_thumbnail($postId)): ?>
-                    <div class="post_item_image">
-                        <img class="post_image" src="<?php echo $postImageSrc; ?>" alt="<?php echo $postTitle; ?>">
-                    </div>
-                <?php else: ?>
-                    <div class="post_item_image">
-                        <img class="post_item_image_default"
-                             src="<?php echo $baseURL . '/'. $defaultImage; ?>"  alt="<?php echo $postTitle; ?>">
-                    </div>
-                <?php endif; ?>
-                <div class="post_item_description"><?php echo $postContent; ?></div>
+                <div class="post_item_header post_element"><h1 class="post_item_title"><?php echo $postTitle; ?></h1></div>
+                <div class="post_item_image post_element">
+                    <img class="post_image" src="<?php echo $postImageSrc?>" alt="<?php echo $postTitle;?>"/>
+                </div>
+                <div class="post_item_description post_element"><?php echo $postContent; ?></div>
             </div>
         </div>
     </div>
