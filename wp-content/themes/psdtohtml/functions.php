@@ -143,22 +143,5 @@ function breadcrumbs($categoryObj)
     return array_reverse($categoryArr);
 }
 
-function strip_shortcode_gallery( $content ) {
-    preg_match_all( '/' . get_shortcode_regex() . '/s', $content, $matches, PREG_SET_ORDER );
-
-    if ( ! empty( $matches ) ) {
-        foreach ( $matches as $shortcode ) {
-            if ( 'gallery' === $shortcode[2] ) {
-                $pos = strpos( $content, $shortcode[0] );
-                if( false !== $pos ) {
-                    return substr_replace( $content, '', $pos, strlen( $shortcode[0] ) );
-                }
-            }
-        }
-    }
-
-    return $content;
-}
-
 add_action('wp_ajax_nopriv_sort_date_ajax', 'sort_date_ajax');
 add_action('wp_ajax_sort_date_ajax', 'sort_date_ajax');

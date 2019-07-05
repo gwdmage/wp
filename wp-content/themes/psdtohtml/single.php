@@ -15,11 +15,9 @@ $postImageSrc = get_the_post_thumbnail_url($postObject);
 $categoryTerms = get_the_category($postId);
 $categoryObj = reset($categoryTerms);
 $breadcrumbsArr = breadcrumbs($categoryObj);
-$content = $postObject->post_content;
-$content = apply_filters('the_content', $content);
-$content = str_replace(']]>', ']]&gt;', $content);
-
-
+$postContent = $postObject->post_content;
+$postContent = apply_filters('the_content', $postContent);
+$postContent = str_replace(']]>', ']]&gt;', $postContent);
 ?>
 
 <div class="main-heading">
@@ -43,16 +41,7 @@ $content = str_replace(']]>', ']]&gt;', $content);
             <div class="post_single_item_image">
                 <img class="post_single_item_image" src="<?php echo $postImageSrc; ?>" alt="<?php echo $postTitle; ?>">
             </div>
-            <?php
-
-            $gallery = get_post_gallery( $postId );
-            echo '<pre>';
-            var_dump($gallery);
-            echo '</pre>';
-            die;
-//            echo $content
-            ?>
-
+            <div class="post_single_item_image"><?php echo $postContent; ?></div>
         </div>
     </div>
 </section>
