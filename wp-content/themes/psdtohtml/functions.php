@@ -164,10 +164,9 @@ function breadcrumbs($categoryObj)
  * @return false|string
  */
 function getImageSrc($postObject, $defaultImage, array $size) {
-    $baseURL = get_site_url();
     $defaultImage = $defaultImage ? $defaultImage : get_template_directory_uri() . "/images/psdtohtml-placeholder.png";
     $size = $size ? $size : array(400, 400);
-    return has_post_thumbnail($postObject) ? get_the_post_thumbnail_url($postObject, $size) : $baseURL . '/' . $defaultImage;
+    return has_post_thumbnail($postObject) ? get_the_post_thumbnail_url($postObject, $size) : $defaultImage;
 }
 
 

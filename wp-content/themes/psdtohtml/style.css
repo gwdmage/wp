@@ -493,7 +493,6 @@ input, textarea, select {
     font-size: 13px;
 }
 
-
 .login-form input[type="submit"], .dev-info .all span,
 .btn, .paging .prev, .paging .next, .btn2, .btn-extend, .btn-calculate, .order .navbar .back {
     height: 32px;
@@ -510,7 +509,6 @@ input, textarea, select {
     vertical-align: top;
     color: #fff;
 }
-
 
 #footer .subscribe-form input[type='text'], #footer .subscribe-form input[type='email'] {
     width: 100%;
@@ -599,8 +597,8 @@ ul, menu, dir {
     margin: -9px 0 0;
 }
 
-/** Contact us page*/
 
+/** Contact us page*/
 
 h2.main-title {
     font: 24px/36px 'Avenir LT W01 95 Black', Arial, Helvetica, sans-serif;
@@ -644,7 +642,6 @@ form {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 0, rgba(0, 0, 0, 0) 100%);
     z-index: 10;
 }
-
 
 .contact-us fieldset {
     float: left;
@@ -945,7 +942,6 @@ ul, menu, dir {
     margin-inline-end: 0px;
     padding-inline-start: 40px;
 }
-
 
 
 .file a {
@@ -1251,7 +1247,6 @@ label {
 }
 
 
-
 /*
 Category page
  */
@@ -1312,6 +1307,7 @@ Category page
 .catalog_item_image_default {
     max-width: 100%;
 }
+
 
 /*
     Post Page
@@ -1389,6 +1385,7 @@ ul.breadcrumbs_list li+li:before {
     text-align: left;
     font: 16px/22px 'Avenir LT W01 55 Roman', Arial, Helvetica, sans-serif;
     line-height: 1.75;
+    padding: 0 0 0 30px;
 }
 
 
@@ -1543,8 +1540,6 @@ ul.breadcrumbs_list li+li:before {
     content: '';
 }
 
-
-
 @media only screen and (max-width: 1040px) {
     #header {
         height: auto;
@@ -1607,7 +1602,8 @@ ul.breadcrumbs_list li+li:before {
 
     .post_element {
         width: 100%;
-        margin: 15px;
+        margin: 15px auto;
+        padding: 0px;
     }
 
     .post_item_header {
