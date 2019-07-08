@@ -82,13 +82,9 @@ h1 {
 
 .logo {
     float: left;
-    margin: 23px 37px 0 0;
-    background: url(http://wp.magento1.local/wp-content/themes/psdtohtml/images/logo.png) no-repeat 0 0;
-    background-size: 120px 20px;
-    width: 125px;
-    height: 18px;
-    text-indent: -999em;
-    overflow: hidden;
+    color: white;
+    margin: 23px 0px 0 0;
+    font-size: 24px;
 }
 
 a {
@@ -106,13 +102,12 @@ address {
 }
 
 .contacts {
-    margin: 25px 0 0;
+    margin: 24px -112px 0 70px;
     float: left;
     font-style: normal;
     font-size: 13px;
     line-height: 20px;
 }
-
 
 .contacts a:not(.tel-link) {
     margin: 0 10px 0 0;
@@ -161,7 +156,6 @@ address {
 
 .menu-top-menu-container {
     margin: 0 0 0 -50px;
-    border-right: 1px solid rgba(255, 255, 255, .1);
     letter-spacing: 1px;
     font: 13px/67px 'Avenir LT W01 55 Roman', Arial, Helvetica, sans-serif;
 }
@@ -219,17 +213,12 @@ li {
     padding: 6px 12px;
     border-radius: 2px;
     font: 16px/20px 'Avenir LT W01 55 Roman',Arial,Helvetica,sans-serif;
-
-    background: #f5f5f4;
+    /*background: #f5f5f4;*/
     border: 0;
     position:absolute;
     float: left;
-    left:-75%;
+    left: 50%;
     z-index: 5;
-}
-
-.sub-menu {
-    box-shadow: 0 2px 7px 0 rgba(0,0,0,.3);
 }
 
 .sub-menu a {
@@ -248,11 +237,16 @@ li {
     padding: 10px 18px 9px;
     /*border-bottom: 1px solid transparent;*/
     margin: 0 0 -1px;
+
 }
 
 #nav ul ul li {
     float: none;
     border-top: 1px dotted #a3a6a8;
+    left: -55%;
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0 2px 100px 0 rgba(0,0,0,.3);
 }
 
 #nav ul ul li:first-child {
@@ -265,11 +259,12 @@ li {
     content: '';
     height: 0;
     width: 0;
+    top: -10px;
     position: absolute;
     border-color: rgba(218,225,229,0);
     border-bottom-color: #f5f5f4;
     border-width: 8px;
-    left: 50%;
+    left: -1%;
     margin-left: -8px;
 }
 
@@ -282,8 +277,8 @@ li {
 
 #nav ul ul:before {
     position: absolute;
-    top: -22px;
-    left: 0;
+    top: -15px;
+    left: -50%;
     height: 22px;
     width: 100%;
     content: '';
@@ -296,8 +291,8 @@ li {
 
 .top-menu li:hover .sub-menu {
     display: block;
-    background: #fff;
-    color: #000;
+    /*background: #fff;*/
+    /*color: #000;*/
     left: -50%;
     padding-bottom: 9px;
     border-color: #a3a6a8;
@@ -335,8 +330,6 @@ li {
     height: auto;
     display: block;
 }
-
-.menu-item
 
 /* end navigation menu */
 
@@ -1552,14 +1545,6 @@ ul.breadcrumbs_list li+li:before {
     content: '';
 }
 
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-    .logo {
-        background: url(http://wp.magento1.local/wp-content/themes/psdtohtml/images/logo.png) no-repeat;
-        background-size: 122px 20px;
-    }
-}
-
-
 @media only screen and (max-width: 1040px) {
     #header {
         height: auto;
@@ -1568,9 +1553,7 @@ ul.breadcrumbs_list li+li:before {
     .logo {
         float: none;
         display: block;
-        margin: 23px auto 0;
         position: relative;
-        left: 5px;
     }
 
     .menu {
@@ -1642,7 +1625,7 @@ ul.breadcrumbs_list li+li:before {
     }
 
     .post_item_image {
-        width: 97%;
+        width: 100%;
     }
 
     .post_image {
@@ -1757,6 +1740,11 @@ ul.breadcrumbs_list li+li:before {
     }
     #nav ul ul li {
         border: 0;
+        left: 0;
+        background: #454d50;
+        border: none;
+        box-shadow: none;
+        top:7px;
     }
 
     #nav .sub-menu {
@@ -1783,8 +1771,9 @@ ul.breadcrumbs_list li+li:before {
 
     #nav .drop-active .sub-menu {
         position: static;
-        background: #434c4e;
+        background: #434c4e !important;
         opacity: 1;
+        left: 0;
         box-shadow: none;
     }
 
@@ -1796,6 +1785,7 @@ ul.breadcrumbs_list li+li:before {
         border: 0;
         font-size: 14px;
     }
+
 
     #nav ul ul:before {
         display: none;

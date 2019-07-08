@@ -19,9 +19,7 @@
             <address class="contacts">
                 <a class="contact contact-popup-link" href="/contact-us.html">Contact</a>
                 <a class="chat chat-link chat-online" href="/chat.html">Live chat</a>
-                <a class="tel-link" href="tel:888.724.9414">888.724.9414</a>
             </address>
-
             <nav id="nav" role="navigation">
                 <?php wp_nav_menu(array(
                     'menu' => 'top-menu',

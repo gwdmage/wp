@@ -29,7 +29,7 @@ function my_wp_nav_menu_items($items, $args)
 {
     $menu = wp_get_nav_menu_object($args->menu);
     $phone = get_field('phone', $menu);
-    $html = '<li class="menu-item-phone">' . $phone . '</li>';
+    $html = '<li id="menu-item-phone" class="menu-item">' . $phone . '</li>';
     $items = $html . $items;
 
     return $items;
