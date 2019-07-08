@@ -151,22 +151,17 @@ address {
     color: greenyellow;
 }
 
-
 .contacts span, .contacts .tel-link {
     display: inline-block;
     vertical-align: top;
     position: relative;
 }
 
-
-
 /* Start navigation menu */
 
-
-
 .menu-top-menu-container {
-    /*margin: 0 0 0 -50px;*/
-    /*border-right: 1px solid rgba(255, 255, 255, .1);*/
+    margin: 0 0 0 -50px;
+    border-right: 1px solid rgba(255, 255, 255, .1);
     letter-spacing: 1px;
     font: 13px/67px 'Avenir LT W01 55 Roman', Arial, Helvetica, sans-serif;
 }
