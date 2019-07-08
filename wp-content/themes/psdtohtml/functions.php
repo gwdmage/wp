@@ -127,13 +127,22 @@ function sort_date_ajax()
 add_action('wp_ajax_nopriv_sort_date_ajax', 'sort_date_ajax');
 add_action('wp_ajax_sort_date_ajax', 'sort_date_ajax');
 
-
+/**
+ * @param $id
+ *
+ * @return string
+ */
 function get_page_url_by_id($id)
 {
     $pageObject = get_page($id);
     return $pageObject->post_name;
 }
 
+/**
+ * @param $categoryObj
+ *
+ * @return array
+ */
 function breadcrumbs($categoryObj)
 {
     $categoryArr[$categoryObj->cat_name] = $categoryObj->category_nicename;
@@ -146,3 +155,19 @@ function breadcrumbs($categoryObj)
     }
     return array_reverse($categoryArr);
 }
+
+/**
+ * @param $postObject
+ * @param $defaultImage
+ * @param array $size
+ *
+ * @return false|string
+ */
+function getImageSrc($postObject, $defaultImage, array $size) {
+    $baseURL = get_site_url();
+    $defaultImage = $defaultImage ? $defaultImage : get_template_directory_uri() . "/images/psdtohtml-placeholder.png";
+    $size = $size ? $size : array(400, 400);
+    return has_post_thumbnail($postObject) ? get_the_post_thumbnail_url($postObject, $size) : $baseURL . '/' . $defaultImage;
+}
+
+

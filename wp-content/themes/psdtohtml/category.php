@@ -10,7 +10,6 @@
         <div id="ajax-posts" class="row">
             <?php
             $baseURL = get_site_url();
-            $defaultImage = "wp-content/themes/psdtohtml/images/psdtohtml-placeholder.png";
             /** Start post qty displayed on category page*/
             $postsPerPage = 6;
             $args = array(
@@ -24,8 +23,6 @@
                 $loop->the_post();
                 $postId = get_the_ID(); //get ID of current post
                 $postObject = get_post($postId);
-                $imageSize = array(200, 200);
-                $image = wp_get_attachment_image_src(get_post_thumbnail_id($postId), $imageSize);
                 $postTitle = $postObject->post_title;
                 $content = $postObject->post_content;
                 $content = apply_filters('the_content', $content);
@@ -33,16 +30,8 @@
                 ?>
                 <div class="catalog_list_item">
                     <a href=<?php echo $baseURL . '/' . $postObject->post_name; ?>>
-                        <div class="catalog_list_item_image">
-                        <?php if (has_post_thumbnail($postId)): ?>
-                            <img class="catalog_item_image" src="<?php echo $image[0]; ?>" alt="<?php echo $postTitle;?>">
-                        <?php else : ?>
-                            <img class="catalog_item_image_default"
-                                 src="<?php echo $baseURL . '/'. $defaultImage; ?>" alt="<?php echo $postTitle;?>">
-                        <?php endif; ?>
-                        </div>
-                        <div class="catalog_list_item_title">
-                            <h1 class="catalog_item_title"><?php echo $postTitle;?></h1></div>
+                        <div class="catalog_list_item_image"><img class="catalog_item_image" src="<?php echo  getImageSrc($postObject, null , array(400, 400)); ?>" alt="<?php echo $postTitle;?>"></div>
+                        <div class="catalog_list_item_title"><h1 class="catalog_item_title"><?php echo $postTitle;?></h1></div>
                         <div class="catalog_list_item_description"><?php echo $content; ?></div>
                     </a>
                 </div>
