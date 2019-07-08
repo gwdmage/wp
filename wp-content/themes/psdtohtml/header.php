@@ -11,7 +11,7 @@
 <body <?php body_class(); ?>>
 <header id="header" role="banner" class="fixed-position">
     <div class="header-holder">
-        <h1 class="logo" id="logo" title="PSD to HTML"><a href="/" accesskey="1">PSD2HTML&reg;</a></h1>
+        <h1 class="logo" id="logo" title="PSD to HTML">PSD2HTML®</h1>
         <div class="panel">
             <address class="contacts">
                 <a class="contact contact-popup-link" href="/contact-us.html">Contact</a>
@@ -40,6 +40,25 @@
                 clicks--;
             }
         });
+        clicks = 0;
+
+        $(".menu-item-has-children").on("click", function () {
+            var dropClassName = "drop-active";
+            var mobileMedia = 700;
+            var windowWidth = $(window).width();
+            var dropActiveStatus = $(this).hasClass(dropClassName);
+            if (windowWidth <= mobileMedia && !dropActiveStatus) {
+                $(this).addClass(dropClassName);
+            } else {
+                $(this).removeClass(dropClassName);
+            }
+        });
+
+        $("#menu-item-40").on("click", function () {
+            var hoverClassName = "hover";
+            $(this).addClass(hoverClassName);
+        })
+
     </script>
 </header>
 
