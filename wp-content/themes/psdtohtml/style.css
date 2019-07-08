@@ -73,6 +73,8 @@ h1 {
     display: block;
 }
 
+
+
 .logo a {
     display: block;
     height: 100%;
@@ -81,8 +83,8 @@ h1 {
 .logo {
     float: left;
     margin: 23px 37px 0 0;
-    background: url(http://wp.magento1.local/wp-content/themes/psdtohtml/images/logo.png) no-repeat;
-    background-size: 152px 84px;
+    background: url(http://wp.magento1.local/wp-content/themes/psdtohtml/images/logo.png) no-repeat 0 0;
+    background-size: 120px 20px;
     width: 125px;
     height: 18px;
     text-indent: -999em;
@@ -127,9 +129,8 @@ address {
 }
 
 .contacts .contact::before {
-    content: "✉";
-    font-family: SSStandard;
-    padding-top: 2px;
+    content: "\f0e0";
+    font-family: 'FontAwesome', arial, serif;
 }
 
 .contacts span::before, .contacts .tel-link::before, .contacts a::before {
@@ -234,6 +235,7 @@ li {
     border: 0;
     position:absolute;
     float: left;
+    left:-75%;
     z-index: 5;
 }
 
@@ -1471,6 +1473,12 @@ Category page
     content: '';
 }
 
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .logo {
+        background: url(http://wp.magento1.local/wp-content/themes/psdtohtml/images/logo.png) no-repeat;
+        background-size: 122px 20px;
+    }
+}
 
 
 @media only screen and (max-width: 1040px) {
@@ -1527,7 +1535,7 @@ Category page
     }
 
     #nav ul ul {
-        top: 55px;
+        top: 80px;
     }
 
     #main {
