@@ -202,24 +202,18 @@ address {
     color: #000;
     float: none;
     display: block;
-    padding: 10px 18px 9px;
+    /*padding: 10px 18px 9px;*/
     border-bottom: 1px solid transparent;
     margin: 0 0 -1px;
 }
 
 
 li {
-    display: list-item;
-    text-align: -webkit-match-parent;
+    /*display: list-item;*/
+    /*text-align: -webkit-match-parent;*/
 }
 
-.sub-menu a {
-    color: #fff;
-    cursor: default;
-    /*opacity: .9999;*/
-    transition: all .4s ease;
-    display:inline-block;
-}
+
 
 #nav ul ul {
     text-align: left;
@@ -230,13 +224,25 @@ li {
     padding: 6px 12px;
     border-radius: 2px;
     font: 16px/20px 'Avenir LT W01 55 Roman',Arial,Helvetica,sans-serif;
-    box-shadow: 0 2px 70px 0 rgba(0,0,0,.3);
+
     background: #f5f5f4;
     border: 0;
     position:absolute;
     float: left;
     left:-75%;
     z-index: 5;
+}
+
+.sub-menu {
+    box-shadow: 0 2px 7px 0 rgba(0,0,0,.3);
+}
+
+.sub-menu a {
+    color: #fff;
+    cursor: default;
+    /*opacity: .9999;*/
+    transition: all .4s ease;
+    display:inline-block;
 }
 
 #nav ul ul a {
@@ -275,7 +281,7 @@ li {
 #nav ul ul li:hover {
     background: #fff;
     color: #000;
-    padding-bottom: 9px;
+    /*padding-bottom: 9px;*/
     border-color: #a3a6a8;
 }
 
@@ -1723,10 +1729,6 @@ Category page
 
     .sub-menu {
         left: 9999px;
-    }
-
-    .sub-menu:hover {
-        color: red !important;
     }
 
     #nav ul ul:after, .login-form:after {
