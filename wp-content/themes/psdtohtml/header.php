@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript">
+        var ajaxUrl = "<?php echo admin_url('admin-ajax.php'); ?>";
+    </script>
     <title><?php wp_title('«', true, 'right'); ?><?php bloginfo('name'); ?></title>
     <?php wp_head(); ?>
 </head>
@@ -27,39 +30,6 @@
         </div>
         <a href="#" class="menu"><span>menu</span></a>
     </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script type="text/javascript">
-        var clicks = 0;
-        $(".menu").on("click", function () {
-            if ((clicks % 2) === 0){
-                $("#header").addClass('active-panel');
-                clicks++;
-            } else{
-                $("#header").removeClass('active-panel');
-                clicks--;
-            }
-        });
-        clicks = 0;
-
-        $(".menu-item-has-children").on("click", function () {
-            var dropClassName = "drop-active";
-            var mobileMedia = 700;
-            var windowWidth = $(window).width();
-            var dropActiveStatus = $(this).hasClass(dropClassName);
-            if (windowWidth <= mobileMedia && !dropActiveStatus) {
-                $(this).addClass(dropClassName);
-            } else {
-                $(this).removeClass(dropClassName);
-            }
-        });
-
-        $("#menu-item-40").on("click", function () {
-            var hoverClassName = "hover";
-            $(this).addClass(hoverClassName);
-        })
-
-    </script>
 </header>
 
 

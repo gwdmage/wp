@@ -169,4 +169,12 @@ function getImageSrc($postObject, $defaultImage, array $size) {
     return has_post_thumbnail($postObject) ? get_the_post_thumbnail_url($postObject, $size) : $defaultImage;
 }
 
+add_action( 'wp_enqueue_scripts', 'add_my_script' );
 
+function add_my_script() {
+    wp_enqueue_script(
+        'main', // name your script so that you can attach other scripts and de-register, etc.
+        get_template_directory_uri() . '/js/main.js', // this is the location of your script file
+        array('jquery') // this array lists the scripts upon which your script depends
+    );
+}
