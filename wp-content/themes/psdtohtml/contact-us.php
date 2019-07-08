@@ -7,7 +7,7 @@
             <section role="main">
                 <h2 class="main-title"><?php the_title(); ?></h2>
                 <div id="main">
-                    <form name="contact" method="post" action="https://www.psd2html.com/contact-us.html"
+                    <form name="contact" method="post" action=""
                           novalidate="novalidate" id="contact" class="contact-us js-validation">
                         <fieldset>
                             <div class="details">
@@ -36,7 +36,7 @@
                                             <div class="link-box hidden">
                                                 <div class="txt-holder"><input type="text" data-default-value="http://">
                                                 </div>
-                                                <a href="https://www.psd2html.com/contact-us.html#" class="btn">ok</a>
+                                                <a href="" class="btn">ok</a>
                                             </div>
                                         </div>
                                         <div class="file">
@@ -46,12 +46,12 @@
                                                    class="hidden file-btn errorEvents" data-file-list="">
                                             <ul class="file-bar">
                                                 <li><span style="position: relative; display: inline-block;"><a
-                                                                href="https://www.psd2html.com/contact-us.html#">Browse</a><input
+                                                                href="">Browse</a><input
                                                                 type="file" size="1" multiple=""
                                                                 style="visibility: hidden; position: absolute; top: 5px; left: 10px; width: 40px; height: 10px; border: 0px; cursor: pointer; opacity: 0.0001;"></span>
                                                 </li>
-                                                <li><a href="https://www.psd2html.com/contact-us.html#">Link</a></li>
-                                                <li><a href="https://www.psd2html.com/contact-us.html#">Dropbox</a></li>
+                                                <li><a href="">Link</a></li>
+                                                <li><a href="">Dropbox</a></li>
                                                 <li><span class="drag-drop">drop files here</span></li>
                                             </ul>
                                         </div>
@@ -72,13 +72,13 @@
                                            class="errorEvents">
                                     <label for="contact_privacyPolicy" class="nice-chk"></label>
                                     <span class="txt">I consent to processing of my personal data and accept <a
-                                                href="https://www.psd2html.com/privacy-policy.html" rel="external"
+                                                href="" rel="external"
                                                 target="_blank">Privacy Policy</a>.</span>
                                 </div>
                             </div>
                             <address class="contacts">
                                 <strong class="title">QUESTIONS? CONCERNS?</strong>
-                                <a class="chat chat-link chat-online" href="https://www.psd2html.com/chat.html">Live
+                                <a class="chat chat-link chat-online" href="">Live
                                     chat</a>
                                 <span>888.724.9414</span>
                                 <span class="addr">201 Spear Street, Suite 1100, San Francisco, CA 94105</span>

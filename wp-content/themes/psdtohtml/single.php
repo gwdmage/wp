@@ -3,56 +3,49 @@
  * Template Name: Single Post
  */
 ?>
-
-<?php get_header(); ?>
-
 <?php
+get_header();
+
 $baseURL = get_site_url();
 $postId = get_the_ID(); //get ID of current post
 $postObject = get_post($postId);
 $postTitle = get_the_title($postObject);
-$postImageSrc = get_the_post_thumbnail_url($postObject);
 $categoryTerms = get_the_category($postId);
 $categoryObj = reset($categoryTerms);
 $breadcrumbsArr = breadcrumbs($categoryObj);
-$content = $postObject->post_content;
-$content = apply_filters('the_content', $content);
-$content = str_replace(']]>', ']]&gt;', $content);
-
-
+$postContent = $postObject->post_content;
+$postContent = apply_filters('the_content', $postContent);
+$postContent = str_replace(']]>', ']]&gt;', $postContent);
 ?>
 
 <div class="main-heading">
-    <?php foreach ($breadcrumbsArr as $categoryName => $categoryLink): ?>
+    <?php if ($categoryTerms): ?>
         <div class="breadcrumbs">
             <div class="breadcrumbs_inner">
                 <ul class="breadcrumbs_list">
+                    <?php foreach ($breadcrumbsArr as $categoryName => $categoryLink): ?>
                     <li class="breadcrumbs_list_item">
                         <a class="breadcrumbs_link"
                            href="<?php echo $baseURL . '/' . $categoryLink; ?>">  <?php echo $categoryName; ?></span></a>
                     </li>
+                    <?php endforeach; ?>
                 </ul>
             </div>
         </div>
-    <?php endforeach; ?>
+    <?php else: ?>
+        <div class="main-heading"><h1><?php the_title(); ?></h1></div>
+    <?php endif; ?>
 </div>
 <section role="main">
     <div id="main">
         <div class="post_single">
-            <div class="post_single_item_title"><h1><?php echo $postTitle; ?></h1></div>
-            <div class="post_single_item_image">
-                <img class="post_single_item_image" src="<?php echo $postImageSrc; ?>" alt="<?php echo $postTitle; ?>">
+            <div class="post_item">
+                <div class="post_item_header post_element"><h1 class="post_item_title"><?php echo $postTitle; ?></h1></div>
+                <div class="post_item_image post_element">
+                    <img class="post_image" src="<?php echo getImageSrc($postObject, null , array(400, 400));?>" alt="<?php echo $postTitle;?>"/>
+                </div>
+                <div class="post_item_description post_element"><?php echo $postContent; ?></div>
             </div>
-            <?php
-
-            $gallery = get_post_gallery( $postId );
-            echo '<pre>';
-            var_dump($gallery);
-            echo '</pre>';
-            die;
-//            echo $content
-            ?>
-
         </div>
     </div>
 </section>

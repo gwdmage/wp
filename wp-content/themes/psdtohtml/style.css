@@ -510,7 +510,6 @@ input, textarea, select {
     font-size: 13px;
 }
 
-
 .login-form input[type="submit"], .dev-info .all span,
 .btn, .paging .prev, .paging .next, .btn2, .btn-extend, .btn-calculate, .order .navbar .back {
     height: 32px;
@@ -527,7 +526,6 @@ input, textarea, select {
     vertical-align: top;
     color: #fff;
 }
-
 
 #footer .subscribe-form input[type='text'], #footer .subscribe-form input[type='email'] {
     width: 100%;
@@ -616,8 +614,8 @@ ul, menu, dir {
     margin: -9px 0 0;
 }
 
-/** Contact us page*/
 
+/** Contact us page*/
 
 h2.main-title {
     font: 24px/36px 'Avenir LT W01 95 Black', Arial, Helvetica, sans-serif;
@@ -634,7 +632,7 @@ h2.main-title {
     border-top: 1px dotted #b3b4b4;
     position: relative;
     min-height: calc(75vh - 80px);
-    /*min-height: 100%;*/
+    padding-bottom: 50px;
 }
 
 .contact-us {
@@ -661,7 +659,6 @@ form {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 0, rgba(0, 0, 0, 0) 100%);
     z-index: 10;
 }
-
 
 .contact-us fieldset {
     float: left;
@@ -962,7 +959,6 @@ ul, menu, dir {
     margin-inline-end: 0px;
     padding-inline-start: 40px;
 }
-
 
 
 .file a {
@@ -1268,7 +1264,6 @@ label {
 }
 
 
-
 /*
 Category page
  */
@@ -1281,11 +1276,9 @@ Category page
 }
 
 .catalog_list_item {
-    position: relative;
     width: 33%;
     display: inline-block;
     vertical-align: top;
-    /*margin: 0 2px 33px 0;*/
     padding: 0 30px;
     font-size: 12px;
     letter-spacing: 0;
@@ -1297,13 +1290,13 @@ Category page
     padding: 8px 5px 5px;
 }
 
+.catalog_list_item_image {
+    margin-bottom: 10%;
+}
+
 .catalog_item_image {
     width: 100%;
     display: block;
-}
-
-.catalog_list_item_image {
-    margin-bottom: 10%;
 }
 
 .catalog_list_item_title {
@@ -1312,6 +1305,10 @@ Category page
 
 .catalog_item_title{
     margin: 0 auto;
+}
+
+.catalog_list_item_description .wp-block-gallery{
+    display: none !important;
 }
 
 .catalog_list_item_description {
@@ -1327,6 +1324,87 @@ Category page
 .catalog_item_image_default {
     max-width: 100%;
 }
+
+
+/*
+    Post Page
+*/
+
+.breadcrumbs {
+    position: relative;
+    max-width: 1306px;
+    margin: 0 auto;
+}
+
+.breadcrumbs_inner {
+    text-align: left;
+}
+
+ul.breadcrumbs_list li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+.breadcrumbs_list_item {
+    display: inline;
+}
+
+.breadcrumbs_link {
+    color: #505050;
+}
+
+.post_single {
+    max-width: 1306px;
+    margin: 30px auto;
+    font-size: 0;
+    letter-spacing: -4px;
+}
+.post_item {
+    width: 100%;
+    padding: 0 30px;
+    letter-spacing: 0;
+    height: auto;
+}
+
+.post_element {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 30px;
+    font-size: 12px;
+}
+.post_item a {
+    color: #505050;
+}
+
+.post_item_header {
+    width: 50%;
+    text-align: left;
+
+}
+.post_item_title {
+    margin: 0 auto;
+}
+
+.post_item_image {
+    float: left;
+    width: 50%;
+    padding: 0px;
+}
+
+.post_image {
+    width: 100%;
+    display: block;
+}
+
+.post_item_description {
+    text-align: left;
+    font: 16px/22px 'Avenir LT W01 55 Roman', Arial, Helvetica, sans-serif;
+    line-height: 1.75;
+    padding: 0 0 0 30px;
+}
+
 
 .bottom-navigation {
     text-align: center;
@@ -1553,31 +1631,33 @@ Category page
         font-size: 11px;
     }
 
-    .catalog_list_item {
-        /*padding: 15px 15px 15px 23px;*/
+    .post_single {
+        margin: 0px auto;
     }
 
-    .woocommerce div.product div.images.woocommerce-product-gallery {
-        position: relative;
-        margin: 0;
+    .post_element {
+        width: 100%;
+        margin: 15px auto;
+        padding: 0px;
     }
 
-    .woocommerce div.product div.images {
-        margin-bottom: 0;
+    .post_item_header {
+        width: 100%;
+        text-align: center;
     }
 
-    .woocommerce-product-gallery {
-        width: auto;
-        height: auto;
+    .post_item_image {
+        width: 97%;
     }
 
-    .woocommerce div.product div.images .flex-control-thumbs {
-        overflow: hidden;
-        zoom: 1;
-        margin: 0;
-        padding: 0 5% 0 5%;
+    .post_image {
+        width: 80%;
+        margin: 0 10%;
     }
 
+    .post_item_description {
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width: 620px) {
@@ -1659,6 +1739,10 @@ Category page
         width: 100%;
         border-top: 1px solid #2d3235 !important;
         border-top: 1px dotted #a3a6a8
+    }
+    .post_image {
+        width: 100%;
+        margin: 0;
     }
 
     .menu-top-menu-container ul li ul li {
